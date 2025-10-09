@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import { router } from "./router";
-import "./index.css"; // keep Tailwind setup
+import "./main.css"; // keep Tailwind setup
 
 createApp(App).use(router).mount("#app");
