@@ -1,0 +1,146 @@
+<template>
+  <div class="w-full">
+    <!-- Hero Section -->
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+      <div class="max-w-3xl">
+        <h1 class="mb-8">
+          Product Designer crafting thoughtful digital experiences
+        </h1>
+        <p class="text-muted-foreground max-w-2xl">
+          I help companies create intuitive, user-centered products that solve
+          real problems and delight users. With a focus on research, iteration,
+          and attention to detail.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
+    >
+      <h2 class="mb-12">Selected Projects</h2>
+      <div class="grid grid-cols-1 gap-8">
+        <RouterLink
+          v-for="project in projects"
+          :key="project.id"
+          :to="`/project/${project.id}`"
+          class="block group"
+        >
+          <div
+            class="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="flex flex-col sm:flex-row">
+              <!-- Thumbnail - Top on mobile, Left on desktop -->
+              <div
+                class="w-full sm:w-64 h-48 sm:h-auto bg-accent flex-shrink-0"
+              >
+                <div
+                  class="w-full h-full flex items-center justify-center text-muted-foreground"
+                >
+                  Thumbnail
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-8">
+                <div class="space-y-4">
+                  <span class="text-muted-foreground block mb-2">{{
+                    project.year
+                  }}</span>
+                  <h3
+                    class="group-hover:text-muted-foreground transition-colors"
+                  >
+                    {{ project.title }}
+                  </h3>
+                  <p class="text-muted-foreground line-clamp-2">
+                    {{ project.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </RouterLink>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        <div>
+          <h2 class="mb-8">About Me</h2>
+          <div class="space-y-6 text-muted-foreground">
+            <p>
+              I'm a product designer with a passion for creating meaningful
+              digital experiences. My work combines user research, strategic
+              thinking, and visual design to solve complex problems.
+            </p>
+            <p>
+              Over the past few years, I've had the opportunity to work with
+              startups and established companies, helping them design products
+              that users love and businesses need.
+            </p>
+            <p>
+              When I'm not designing, you can find me exploring new
+              technologies, reading about design systems, or working on side
+              projects.
+            </p>
+          </div>
+          <div class="inline-flex flex-col gap-6 mt-8">
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Linkedin class="w-5 h-5" />
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Github class="w-5 h-5" />
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="aspect-[4/5] bg-accent rounded-lg overflow-hidden">
+          <ImageWithFallback
+            src="https://images.unsplash.com/photo-1652498196118-4577d5f6abd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwZGVzaWduZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzU5NzQ1MzA3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            alt="Workspace"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { onMounted, watch } from "vue";
+import { useRoute, RouterLink } from "vue-router";
+import { projects } from "../data/projects";
+import ImageWithFallback from "../components/ImageWithFallback.vue";
+import { Linkedin, Github } from "lucide-vue-next"; // Vue version of lucide-react
+
+const route = useRoute();
+
+// Handle scrolling when navigating from another page
+onMounted(() => {
+  const scrollTo = route?.state?.scrollTo as string | undefined;
+  if (scrollTo) {
+    // Use setTimeout to ensure DOM is ready
+    setTimeout(() => {
+      const element = document.getElementById(scrollTo);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  }
+});
+</script>
