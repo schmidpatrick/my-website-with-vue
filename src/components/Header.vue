@@ -41,42 +41,41 @@
         </div>
       </nav>
     </div>
-
-    <!-- Mobile Menu Overlay -->
-    <div
-      v-if="isHomePage"
-      class="fixed inset-0 z-40 sm:hidden transition-all duration-500 ease-in-out"
-      :class="{
-        'opacity-100 pointer-events-auto': isOpen,
-        'opacity-0 pointer-events-none': !isOpen,
-      }"
-    >
-      <div class="absolute inset-0 bg-background/95 backdrop-blur-xl">
-        <div
-          class="flex flex-col h-full pt-16 transition-all duration-500 delay-150"
-          :class="{
-            'opacity-100 translate-y-0': isOpen,
-            'opacity-0 -translate-y-4': !isOpen,
-          }"
-        >
-          <nav class="flex flex-col w-full">
-            <button
-              @click="scrollToSection('projects')"
-              class="w-full text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
-            >
-              Projects
-            </button>
-            <button
-              @click="scrollToSection('about')"
-              class="w-full text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
-            >
-              About
-            </button>
-          </nav>
-        </div>
+  </header>
+  <!-- Mobile Menu Overlay -->
+  <div
+    v-if="isHomePage"
+    class="fixed inset-0 z-40 sm:hidden transition-all duration-500 ease-in-out"
+    :class="{
+      'opacity-100 pointer-events-auto': isOpen,
+      'opacity-0 pointer-events-none': !isOpen,
+    }"
+  >
+    <div class="absolute inset-0 bg-background/95 backdrop-blur-xl">
+      <div
+        class="flex flex-col h-full pt-16 transition-all duration-500 delay-150"
+        :class="{
+          'opacity-100 translate-y-0': isOpen,
+          'opacity-0 -translate-y-4': !isOpen,
+        }"
+      >
+        <nav class="flex flex-col w-full">
+          <button
+            @click="scrollToSection('projects')"
+            class="w-full text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
+          >
+            Projects
+          </button>
+          <button
+            @click="scrollToSection('about')"
+            class="w-full text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
+          >
+            About
+          </button>
+        </nav>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script setup lang="ts">
