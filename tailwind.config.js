@@ -48,6 +48,9 @@ export default {
       fontSize: {
         base: "var(--font-size)",
       },
+      transitionDuration: {
+        400: "400ms",
+      },
     },
   },
   plugins: [],
