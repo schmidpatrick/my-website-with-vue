@@ -46,20 +46,19 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['"Inter Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: [
-          "ui-monospace",
-          "SFMono-Regular",
-          "Menlo",
-          "Monaco",
-          "Consolas",
-          "Liberation Mono",
-          "Courier New",
-          "monospace",
-        ],
+        sans: "var(--font-sans)",
+        mono: "var(--font-mono)",
       },
       fontSize: {
         base: "var(--font-size)",
+        lg: "var(--text-lg)",
+        xl: "var(--text-xl)",
+        "2xl": "var(--text-2xl)",
+      },
+      fontWeight: {
+        normal: "var(--font-weight-normal)",
+        medium: "var(--font-weight-medium)",
+        bold: "var(--font-weight-bold)",
       },
       transitionDuration: {
         400: "400ms",
