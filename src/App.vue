@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <Header name="Patrick Schmid" />
-    <main class="flex-1">
+    <main class="flex-1 pt-12">
       <RouterView />
     </main>
     <Footer />

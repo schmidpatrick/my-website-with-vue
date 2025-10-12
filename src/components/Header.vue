@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-background/80">
+  <header class="fixed top-0 z-50 w-full backdrop-blur-xl bg-background/80">
     <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
       <nav>
         <div class="flex items-center justify-between h-12">
@@ -53,7 +53,7 @@
   >
     <div class="absolute inset-0 bg-background/95 backdrop-blur-xl">
       <div
-        class="flex flex-col h-full pt-16 transition-all duration-500 delay-150"
+        class="flex flex-col h-full pt-16 transition-all duration-500 delay-200"
         :class="{
           'opacity-100 translate-y-0': isOpen,
           'opacity-0 -translate-y-4': !isOpen,
