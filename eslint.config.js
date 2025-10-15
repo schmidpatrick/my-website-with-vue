@@ -1,6 +1,7 @@
 import eslintPluginVue from "eslint-plugin-vue";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import vueParser from "vue-eslint-parser";
 import prettierConfig from "eslint-config-prettier";
 
 export default [
@@ -9,7 +10,7 @@ export default [
     ignores: ["dist", "node_modules"],
 
     languageOptions: {
-      parser: require("vue-eslint-parser"), // Vue parses first ...
+      parser: vueParser, // Vue parses first ...
       parserOptions: {
         parser: tsParser, // ... then TS for <script lang="ts">
         ecmaVersion: 2020,
