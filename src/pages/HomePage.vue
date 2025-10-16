@@ -6,7 +6,7 @@
         <h1 class="mb-8">
           Product Designer crafting thoughtful digital experiences
         </h1>
-        <p class="text-muted-foreground max-w-2xl">
+        <p class="max-w-2xl">
           I help companies create intuitive, user-centered products that solve
           real problems and delight users. With a focus on research, iteration,
           and attention to detail.
@@ -24,7 +24,7 @@
         <RouterLink
           v-for="project in projects"
           :key="project.id"
-          :to="`/project/${project.id}`"
+          :to="project.path"
           class="block group"
         >
           <div
@@ -72,7 +72,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         <div>
           <h2 class="mb-8">About Me</h2>
-          <div class="space-y-6 text-muted-foreground">
+          <div class="space-y-6">
             <p>
               I'm a product designer with a passion for creating meaningful
               digital experiences. My work combines user research, strategic

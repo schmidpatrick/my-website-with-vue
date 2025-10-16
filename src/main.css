@@ -25,4 +25,15 @@
   h4 {
     @apply text-base font-medium;
   }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    scroll-margin-top: 4rem;
+  }
+
+  p {
+    @apply text-muted-foreground;
+  }
 }

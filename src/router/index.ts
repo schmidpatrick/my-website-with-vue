@@ -1,12 +1,12 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from "../pages/HomePage.vue";
-// import ProjectDetailPage from "../pages/ProjectDetailPage.vue";
+import ExampleProjectPage from "@/pages/projects/ExampleProjectPage.vue";
 // import LegalNoticePage from "../pages/LegalNoticePage.vue";
 // import PrivacyPage from "../pages/PrivacyPage.vue";
 
 const routes = [
   { path: "/", component: HomePage },
-  // { path: "/project/:projectId", component: ProjectDetailPage },
+  { path: "/projects/example", component: ExampleProjectPage },
   // { path: "/legal-notice", component: LegalNoticePage },
   // { path: "/privacy", component: PrivacyPage },
 ];
