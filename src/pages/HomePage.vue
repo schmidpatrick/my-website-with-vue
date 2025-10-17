@@ -3,9 +3,7 @@
     <!-- Hero Section -->
     <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
       <div class="max-w-3xl">
-        <h1 class="mb-8">
-          Product Designer crafting thoughtful digital experiences
-        </h1>
+        <h1>Product Designer crafting thoughtful digital experiences</h1>
         <p class="max-w-2xl">
           I help companies create intuitive, user-centered products that solve
           real problems and delight users. With a focus on research, iteration,
@@ -15,11 +13,8 @@
     </section>
 
     <!-- Projects Section -->
-    <section
-      id="projects"
-      class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
-    >
-      <h2 class="mb-12">Selected Projects</h2>
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <h2 id="projects">Selected Projects</h2>
       <div class="grid grid-cols-1 gap-8">
         <RouterLink
           v-for="project in projects"
@@ -48,9 +43,7 @@
                   <span class="text-muted-foreground block mb-2">{{
                     project.year
                   }}</span>
-                  <h3
-                    class="group-hover:text-muted-foreground transition-colors"
-                  >
+                  <h3>
                     {{ project.title }}
                   </h3>
                   <p class="text-muted-foreground line-clamp-2">
@@ -65,30 +58,24 @@
     </section>
 
     <!-- About Section -->
-    <section
-      id="about"
-      class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
-    >
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-        <div>
-          <h2 class="mb-8">About Me</h2>
-          <div class="space-y-6">
-            <p>
-              I'm a product designer with a passion for creating meaningful
-              digital experiences. My work combines user research, strategic
-              thinking, and visual design to solve complex problems.
-            </p>
-            <p>
-              Over the past few years, I've had the opportunity to work with
-              startups and established companies, helping them design products
-              that users love and businesses need.
-            </p>
-            <p>
-              When I'm not designing, you can find me exploring new
-              technologies, reading about design systems, or working on side
-              projects.
-            </p>
-          </div>
+        <section>
+          <h2 id="about">About Me</h2>
+          <p>
+            I'm a product designer with a passion for creating meaningful
+            digital experiences. My work combines user research, strategic
+            thinking, and visual design to solve complex problems.
+          </p>
+          <p>
+            Over the past few years, I've had the opportunity to work with
+            startups and established companies, helping them design products
+            that users love and businesses need.
+          </p>
+          <p>
+            When I'm not designing, you can find me exploring new technologies,
+            reading about design systems, or working on side projects.
+          </p>
           <div class="inline-flex flex-col gap-6 mt-8">
             <a
               href="https://linkedin.com/in/yourprofile"
@@ -109,7 +96,7 @@
               <span>GitHub</span>
             </a>
           </div>
-        </div>
+        </section>
 
         <div class="aspect-[4/5] bg-accent rounded-lg overflow-hidden">
           <ImageWithFallback

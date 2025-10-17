@@ -10,30 +10,34 @@
     @apply font-sans;
   }
 
-  h1 {
-    @apply text-2xl font-medium;
-  }
-
-  h2 {
-    @apply text-xl font-medium;
-  }
-
-  h3 {
-    @apply text-lg font-medium;
-  }
-
-  h4 {
-    @apply text-base font-medium;
-  }
-
   h1,
   h2,
   h3,
   h4 {
-    scroll-margin-top: 4rem;
+    @apply scroll-mt-16 font-medium;
+  }
+
+  h1 {
+    @apply text-2xl leading-tight tracking-tight mb-8;
+  }
+
+  h2 {
+    @apply text-xl leading-snug mb-8;
+  }
+
+  h3 {
+    @apply text-lg leading-snug;
+  }
+
+  h4 {
+    @apply text-base leading-normal;
   }
 
   p {
-    @apply text-muted-foreground;
+    @apply text-base text-muted-foreground leading-relaxed;
+  }
+
+  section {
+    @apply space-y-6;
   }
 }

@@ -11,13 +11,13 @@
               <span>•</span>
               <span>{{ project.role }}</span>
             </div>
-            <h1 class="mb-8">{{ project.title }}</h1>
+            <h1>{{ project.title }}</h1>
             <p>{{ project.description }}</p>
           </div>
 
           <div class="space-y-16">
             <!-- Overview -->
-            <section class="space-y-8">
+            <section>
               <h2 id="overview">Overview</h2>
               <p>
                 This project involved reimagining the user experience from the
@@ -28,7 +28,7 @@
             </section>
 
             <!-- The Challenge -->
-            <section class="space-y-8">
+            <section>
               <h2 id="challenge">The Challenge</h2>
               <p>
                 The existing app faced several usability issues that impacted
@@ -54,7 +54,7 @@
             <!-- Design Process -->
             <section class="space-y-8">
               <h2 id="process">Design Process</h2>
-              <div class="space-y-6">
+              <section>
                 <h3>Research & Discovery</h3>
                 <p>
                   We conducted interviews with 25 participants and analyzed
@@ -71,29 +71,9 @@
                   behavioral data to identify key friction points and
                   opportunities for improvement.
                 </p>
-                <p>
-                  We conducted interviews with 25 participants and analyzed
-                  behavioral data to identify key friction points and
-                  opportunities for improvement.
-                </p>
-                <p>
-                  We conducted interviews with 25 participants and analyzed
-                  behavioral data to identify key friction points and
-                  opportunities for improvement.
-                </p>
-                <p>
-                  We conducted interviews with 25 participants and analyzed
-                  behavioral data to identify key friction points and
-                  opportunities for improvement.
-                </p>
-                <p>
-                  We conducted interviews with 25 participants and analyzed
-                  behavioral data to identify key friction points and
-                  opportunities for improvement.
-                </p>
-              </div>
+              </section>
 
-              <div class="space-y-6">
+              <section>
                 <h3>Ideation & Iteration</h3>
                 <p>
                   Through multiple design sprints, we refined our approach with
@@ -111,43 +91,7 @@
                   Through multiple design sprints, we refined our approach with
                   regular usability tests and feedback sessions.
                 </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-                <p>
-                  Through multiple design sprints, we refined our approach with
-                  regular usability tests and feedback sessions.
-                </p>
-              </div>
+              </section>
             </section>
 
             <!-- Final UI -->
@@ -158,7 +102,7 @@
             />
 
             <!-- The Solution -->
-            <section class="space-y-8">
+            <section>
               <h2 id="solution">The Solution</h2>
               <p>The redesigned app focused on three key pillars:</p>
               <ProjectBulletList
@@ -171,7 +115,7 @@
             </section>
 
             <!-- Results -->
-            <section class="space-y-8">
+            <section>
               <h2 id="results">Results & Impact</h2>
               <p>
                 The new design launched successfully and delivered measurable
