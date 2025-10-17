@@ -15,13 +15,13 @@
           <li v-for="h in headings" :key="h.id">
             <button
               :data-id="h.id"
-              @click="scrollTo(h.id)"
               class="relative w-full text-left py-2 rounded-md transition-colors duration-200"
               :class="
                 activeId === h.id
                   ? 'text-foreground font-medium'
                   : 'text-muted-foreground hover:text-foreground'
               "
+              @click="scrollTo(h.id)"
             >
               {{ h.text }}
             </button>
@@ -75,7 +75,7 @@ function updateIndicator() {
     const container = listRef.value;
     if (!container) return;
     const activeEl = container.querySelector<HTMLElement>(
-      `button[data-id="${activeId.value}"]`
+      `button[data-id="${activeId.value}"]`,
     );
     if (activeEl) {
       indicatorTop.value = activeEl.offsetTop + 8;
