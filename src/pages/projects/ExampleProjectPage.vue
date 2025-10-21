@@ -12,6 +12,10 @@
       </p>
     </section>
 
+    <ProjectCallout variant="quote" author="Jack Sparrow">
+      This is a quote. And here comes another qoute. Or highlight.
+    </ProjectCallout>
+
     <!-- The Challenge -->
     <section>
       <h2 id="challenge">The Challenge</h2>
@@ -120,4 +124,5 @@ import ProjectLayout from "@/components/project/ProjectLayout.vue";
 import ProjectHeader from "@/components/project/ProjectHeader.vue";
 import ProjectBulletList from "@/components/project/ProjectBulletList.vue";
 import ProjectImage from "@/components/project/ProjectImage.vue";
+import ProjectCallout from "@/components/project/ProjectCallout.vue";
 </script>
