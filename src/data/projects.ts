@@ -9,6 +9,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "mobility-app",
+    year: "2025",
+    title: "Public Transport App Redesign",
+    description:
+      "A mobile app for public transportation that improves ticketing and trip planning with real-time data and accessibility features.",
+    path: "/projects/mobility-app",
+  },
+  {
     id: "example",
     year: "2025",
     title: "Example Project Page",
