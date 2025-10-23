@@ -7,7 +7,7 @@
         <!-- Animated left bar -->
         <div
           v-show="activeId"
-          class="absolute -left-4 w-[3px] bg-primary rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)]"
+          class="absolute -left-4 w-[4px] bg-primary rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)]"
           :style="indicatorStyle"
         ></div>
 
