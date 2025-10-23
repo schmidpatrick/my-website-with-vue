@@ -87,7 +87,7 @@
         For the bootcamp pitch, I structured the redesign around a simple,
         relatable story:
       </p>
-      <ProjectCallout variant="quote">
+      <ProjectCallout variant="highlight">
         Getting to a dentist appointment on time.
       </ProjectCallout>
       <p>
