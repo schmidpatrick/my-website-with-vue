@@ -1,6 +1,7 @@
 export interface Project {
   id: string;
   year: string;
+  role: string;
   title: string;
   description: string;
   thumbnail?: string;
@@ -11,14 +12,16 @@ export const projects: Project[] = [
   {
     id: "mobility-app",
     year: "2025",
-    title: "Public Transport App Redesign",
+    role: "Product Designer",
+    title: "KVB App Redesign — Restoring Trust in Everyday Mobility",
     description:
-      "A mobile app for public transportation that improves ticketing and trip planning with real-time data and accessibility features.",
+      "A redesign of the KVB public transport app, exploring how thoughtful interface design and visual clarity can rebuild trust in an everyday mobility tool.",
     path: "/projects/mobility-app",
   },
   {
     id: "example",
     year: "2025",
+    role: "",
     title: "Example Project Page",
     description:
       "A mobile app for public transportation that improves ticketing and trip planning with real-time data and accessibility features.",
@@ -27,6 +30,7 @@ export const projects: Project[] = [
   {
     id: "coffee-dashboard",
     year: "2023",
+    role: "",
     title: "Coffee Roaster Dashboard",
     description:
       "A responsive web app that visualizes roasting profiles and quality metrics for small batch roasters.",
@@ -34,6 +38,7 @@ export const projects: Project[] = [
   {
     id: "wellness-platform",
     year: "2022",
+    role: "",
     title: "Wellness Platform",
     description:
       "A platform that helps users track their habits and progress towards mindfulness and health goals.",
