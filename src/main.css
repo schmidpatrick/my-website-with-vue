@@ -37,6 +37,10 @@
     @apply text-base text-muted-foreground leading-relaxed;
   }
 
+  strong {
+    @apply font-semibold
+  }
+
   section {
     @apply space-y-6;
   }
