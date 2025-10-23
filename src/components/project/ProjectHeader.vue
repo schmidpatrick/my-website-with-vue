@@ -4,6 +4,8 @@
       <span>{{ year }}</span>
       <span>•</span>
       <span>{{ role }}</span>
+      <span>•</span>
+      <span>{{ timeToRead }} min read</span>
     </div>
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
@@ -14,5 +16,5 @@
 import { useCurrentProject } from "@/composables/useCurrentProject";
 
 const project = useCurrentProject();
-const { title, description, year, role } = project.value;
+const { title, description, year, role, timeToRead } = project.value;
 </script>
