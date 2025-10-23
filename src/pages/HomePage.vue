@@ -40,9 +40,13 @@
               <!-- Content -->
               <div class="flex-1 p-8">
                 <div class="space-y-4">
-                  <span class="text-muted-foreground block mb-2">{{
-                    project.year
-                  }}</span>
+                  <div
+                    class="flex flex-wrap gap-x-4 gap-y-2 mb-2 text-muted-foreground"
+                  >
+                    <span>{{ project.year }}</span>
+                    <span>•</span>
+                    <span>{{ project.role }}</span>
+                  </div>
                   <h3>
                     {{ project.title }}
                   </h3>
