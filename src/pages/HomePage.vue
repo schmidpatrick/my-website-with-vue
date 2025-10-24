@@ -41,7 +41,7 @@
               <div class="flex-1 p-8">
                 <div class="space-y-4">
                   <div
-                    class="flex flex-wrap gap-x-4 gap-y-2 mb-2 text-muted-foreground"
+                    class="flex flex-wrap gap-x-4 gap-y-2 mb-2 text-sm text-muted-foreground"
                   >
                     <span>{{ project.year }}</span>
                     <span>•</span>
@@ -115,7 +115,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, watch } from "vue";
+import { onMounted } from "vue";
 import { useRoute, RouterLink } from "vue-router";
 import { projects } from "../data/projects";
 import ImageWithFallback from "../components/ImageWithFallback.vue";
