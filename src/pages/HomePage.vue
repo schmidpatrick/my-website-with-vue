@@ -23,7 +23,7 @@
           class="block group"
         >
           <div
-            class="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            class="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
           >
             <div class="flex flex-col sm:flex-row">
               <!-- Thumbnail - Top on mobile, Left on desktop -->
@@ -47,7 +47,7 @@
                     <span>•</span>
                     <span>{{ project.role }}</span>
                   </div>
-                  <h3>
+                  <h3 class="line-clamp-1">
                     {{ project.title }}
                   </h3>
                   <p class="text-muted-foreground line-clamp-2">
