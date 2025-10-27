@@ -126,20 +126,18 @@
       </p>
       <ProjectBulletList>
         <ProjectBulletListItem
-          >Neutral color palette with strong contrasts for
-          accessibility</ProjectBulletListItem
-        >
+          >Dynamic color system, with strong contrasts for accessibility and a
+          personalized UI, makes the app feel baked into the system
+        </ProjectBulletListItem>
         <ProjectBulletListItem
-          >Updated typography for improved legibility</ProjectBulletListItem
-        >
+          >Updated typography for improved legibility
+        </ProjectBulletListItem>
         <ProjectBulletListItem
-          >Visual hierarchy that emphasizes the "next step" in the
-          journey</ProjectBulletListItem
-        >
+          >Visual hierarchy that emphasizes the "next step" in the journey
+        </ProjectBulletListItem>
         <ProjectBulletListItem
-          >Calmer tone and more breathing space to convey
-          reliability</ProjectBulletListItem
-        >
+          >Calmer tone and more breathing space to convey reliability
+        </ProjectBulletListItem>
       </ProjectBulletList>
       <p>
         High-fidelity screens illustrate a unified experience — one that looks
