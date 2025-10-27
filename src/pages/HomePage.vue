@@ -65,20 +65,23 @@
     <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         <section>
-          <h2 id="about">About Me</h2>
+          <h2 id="about">Behind the Pixels</h2>
           <p>
-            I'm a product designer with a passion for creating meaningful
-            digital experiences. My work combines user research, strategic
-            thinking, and visual design to solve complex problems.
+            A closer look at what drives my work and the thinking behind it.
           </p>
           <p>
-            Over the past few years, I've had the opportunity to work with
-            startups and established companies, helping them design products
-            that users love and businesses need.
+            Since 2016, I’ve helped startups and small businesses turn ideas
+            into digital products — solving complex challenges through
+            thoughtful design and clear interfaces.
           </p>
           <p>
-            When I'm not designing, you can find me exploring new technologies,
-            reading about design systems, or working on side projects.
+            With a background in frontend development, I bring structure and
+            detail to the design process, shaping experiences that are
+            intuitive, consistent, and built to last.
+          </p>
+          <p>
+            When I’m not designing, I’m usually longboarding along the Rhine
+            promenade, chasing the perfect latte art, or getting lost in music.
           </p>
           <div class="inline-flex flex-col gap-6 mt-8">
             <a
