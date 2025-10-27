@@ -3,11 +3,11 @@
     <!-- Hero Section -->
     <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
       <div class="max-w-3xl">
-        <h1>Product Designer crafting thoughtful digital experiences</h1>
+        <h1>Thoughtful products. Consistent design. Real impact.</h1>
         <p class="max-w-2xl">
-          I help companies create intuitive, user-centered products that solve
-          real problems and delight users. With a focus on research, iteration,
-          and attention to detail.
+          I’m a product designer with a background in frontend development —
+          combining research, design systems, and visual craft to create
+          intuitive experiences that make a difference.
         </p>
       </div>
     </section>

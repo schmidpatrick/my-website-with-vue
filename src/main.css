@@ -18,7 +18,7 @@
   }
 
   h1 {
-    @apply text-2xl leading-tight tracking-tight mb-8;
+    @apply text-2xl sm:text-3xl leading-tight tracking-tight mb-8;
   }
 
   h2 {
