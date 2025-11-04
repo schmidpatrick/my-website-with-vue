@@ -3,8 +3,10 @@ NOTE:
 Color values use oklch (L-C-H) color space! 
 */
 :root {
+  /* --oklch-check: oklch(97.072% 0.00276 285.755); */
   --background: 100% 0.00011 271.152;
   --foreground: .145 0 0;
+  --section: 97.072% 0.00276 285.755;
   --card: 100% 0.00011 271.152;
   --card-foreground: .145 0 0;
   --popover: 1 0 0;
@@ -42,6 +44,7 @@ Color values use oklch (L-C-H) color space!
 .dark {
   --background: .145 0 0;
   --foreground: .985 0 0;
+  --section: 19.125% 0.00002 271.152;
   --card: .145 0 0;
   --card-foreground: .985 0 0;
   --popover: .145 0 0;

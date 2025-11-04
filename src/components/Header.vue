@@ -10,20 +10,20 @@
             :class="{ 'sm:block invisible': isOpen }"
           >
             <ArrowLeft v-if="!isHomePage" :size="20" />
-            <span class="font-bold">{{ name }}</span>
+            <span class="font-semibold text-foreground">{{ name }}</span>
           </RouterLink>
 
           <!-- Desktop Navigation Links - Only on homepage -->
           <div v-if="isHomePage" class="hidden sm:flex h-full gap-8 text-sm">
             <button
+              class="text-foreground hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('projects')"
-              class="hover:opacity-60 transition-opacity flex items-center"
             >
               Projects
             </button>
             <button
+              class="text-foreground hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('about')"
-              class="hover:opacity-60 transition-opacity flex items-center"
             >
               About
             </button>
@@ -32,9 +32,9 @@
           <!-- Mobile Menu Button - Only on homepage -->
           <button
             v-if="isHomePage"
-            @click="toggleMenu"
             class="sm:hidden hover:opacity-60 transition-opacity p-2 -mr-2 z-[60]"
             :aria-label="isOpen ? 'Close menu' : 'Open menu'"
+            @click="toggleMenu"
           >
             <MenuIcon :isOpen="isOpen" />
           </button>
@@ -61,14 +61,14 @@
       >
         <nav class="flex flex-col w-full">
           <button
+            class="w-full text-foreground text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
             @click="scrollToSection('projects')"
-            class="w-full text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
           >
             Projects
           </button>
           <button
+            class="w-full text-foreground text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
             @click="scrollToSection('about')"
-            class="w-full text-left px-8 py-4 hover:opacity-60 transition-opacity text-[32px] leading-tight"
           >
             About
           </button>

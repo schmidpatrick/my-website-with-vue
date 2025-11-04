@@ -1,6 +1,6 @@
 <template>
   <div v-if="headings.length" class="sticky top-24">
-    <div class="space-y-4">
+    <div class="space-y-3">
       <h4 class="text-muted-foreground">On this page</h4>
 
       <nav class="relative">

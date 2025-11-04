@@ -8,6 +8,10 @@ export default {
         background: "oklch(var(--background) / <alpha-value>)",
         foreground: "oklch(var(--foreground) / <alpha-value>)",
 
+        section: {
+          DEFAULT: "oklch(var(--section) / <alpha-value>)",
+        },
+
         card: {
           DEFAULT: "oklch(var(--card) / <alpha-value>)",
           foreground: "oklch(var(--card-foreground) / <alpha-value>)",
