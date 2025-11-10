@@ -68,22 +68,21 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
         <section>
           <h2 id="about">Behind the Pixels</h2>
+          <p>A closer look at what shapes my approach to design.</p>
           <p>
-            A closer look at what drives my work and the thinking behind it.
+            Since 2016, I’ve been working with startups and small teams to turn
+            ideas into digital products — tackling complex challenges through
+            clarity, structure, and thoughtful detail.
           </p>
           <p>
-            Since 2016, I’ve helped startups and small businesses turn ideas
-            into digital products — solving complex challenges through
-            thoughtful design and clear interfaces.
+            My background in frontend development informs how I design. It’s
+            where I learned to value systems, precision, and the small decisions
+            that shape how something feels — guiding me to create experiences
+            that are intuitive, consistent, and built to last.
           </p>
           <p>
-            With a background in frontend development, I bring structure and
-            detail to the design process, shaping experiences that are
-            intuitive, consistent, and built to last.
-          </p>
-          <p>
-            When I’m not designing, I’m usually longboarding along the Rhine
-            promenade, chasing the perfect latte art, or getting lost in music.
+            Beyond the screen, you’ll likely find me longboarding along the
+            Rhine, refining latte art, or getting lost in music.
           </p>
           <!-- <div class="inline-flex flex-col gap-6 mt-8">
             <a
