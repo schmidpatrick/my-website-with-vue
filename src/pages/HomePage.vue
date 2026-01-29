@@ -108,8 +108,8 @@
 
         <div class="aspect-[4/5] bg-accent rounded-3xl overflow-hidden">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1652498196118-4577d5f6abd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwZGVzaWduZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzU5NzQ1MzA3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Workspace"
+            src="/src/assets/images/patrick-medium.png"
+            alt="An image of myself"
             class="w-full h-full object-cover"
           />
         </div>
