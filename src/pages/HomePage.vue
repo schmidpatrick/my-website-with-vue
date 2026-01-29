@@ -16,48 +16,15 @@
     <section class="w-full bg-section">
       <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         <h2 id="projects" class="mb-8">Selected Projects</h2>
-        <div class="grid grid-cols-1 gap-8">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <RouterLink
-            v-for="project in projects"
+            v-for="project in projects.slice(0, 3)"
             :key="project.id"
             :to="project.path"
-            class="block group"
+            class="group"
           >
-            <div
-              class="bg-card rounded-3xl overflow-hidden hover:scale-[1.0161290323] transition-transform duration-300 ease-[cubic-bezier(0,0,.5,1)]"
-            >
-              <div class="flex flex-col sm:flex-row">
-                <!-- Thumbnail - Top on mobile, Left on desktop -->
-                <div
-                  class="w-full sm:w-64 h-48 sm:h-auto bg-accent flex-shrink-0"
-                >
-                  <div
-                    class="w-full h-full flex items-center justify-center text-muted-foreground"
-                  >
-                    Thumbnail
-                  </div>
-                </div>
-
-                <!-- Content -->
-                <div class="flex-1 p-8">
-                  <div class="space-y-4">
-                    <div
-                      class="flex flex-wrap gap-x-4 gap-y-2 mb-2 text-sm text-muted-foreground"
-                    >
-                      <span>{{ project.year }}</span>
-                      <span>•</span>
-                      <span>{{ project.role }}</span>
-                    </div>
-                    <h3 class="line-clamp-1">
-                      {{ project.title }}
-                    </h3>
-                    <p class="text-muted-foreground line-clamp-2">
-                      {{ project.description }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProjectCard :project="project" />
           </RouterLink>
         </div>
       </div>
@@ -122,6 +89,7 @@
 import { onMounted } from "vue";
 import { useRoute, RouterLink } from "vue-router";
 import { projects } from "../data/projects";
+import ProjectCard from "@/components/project/ProjectCard.vue";
 import ImageWithFallback from "../components/ImageWithFallback.vue";
 import { Linkedin, Github } from "lucide-vue-next"; // Vue version of lucide-react
 
