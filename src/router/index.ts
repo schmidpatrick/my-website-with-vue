@@ -16,4 +16,20 @@ const routes = [
 export const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // If browser saved scroll position (back/forward)
+    if (savedPosition) return savedPosition;
+
+    // If navigating to an anchor (e.g., #projects)
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+        top: 0,
+      };
+    }
+
+    // Default: scroll to top of page
+    return { top: 0 };
+  },
 });
