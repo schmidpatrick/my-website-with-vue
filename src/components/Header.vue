@@ -16,13 +16,13 @@
           <!-- Desktop Navigation Links - Only on homepage -->
           <div v-if="isHomePage" class="hidden sm:flex h-full gap-8 text-sm">
             <button
-              class="text-foreground hover:opacity-60 transition-opacity flex items-center"
+              class="text-foreground font-medium hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('projects')"
             >
               Projects
             </button>
             <button
-              class="text-foreground hover:opacity-60 transition-opacity flex items-center"
+              class="text-foreground font-medium hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('about')"
             >
               About

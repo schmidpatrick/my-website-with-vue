@@ -12,7 +12,7 @@ const isQuote = computed(() => props.variant === "quote");
 </script>
 
 <template>
-  <div class="rounded-lg bg-accent/50 p-6 md:p-8">
+  <div class="rounded-3xl bg-accent/50 p-6 md:p-8">
     <!-- Quote icon -->
     <Quote
       v-if="isQuote"

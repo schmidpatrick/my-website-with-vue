@@ -1,6 +1,6 @@
 <template>
   <div v-if="headings.length" class="sticky top-24">
-    <div class="space-y-3">
+    <div class="space-y-2">
       <h4 class="text-muted-foreground">On this page</h4>
 
       <nav class="relative">
@@ -11,7 +11,7 @@
           :style="indicatorStyle"
         ></div>
 
-        <ul ref="listRef" class="relative space-y-1 text-sm">
+        <ul ref="listRef" class="relative text-sm">
           <li v-for="h in headings" :key="h.id">
             <button
               :data-id="h.id"
