@@ -1,7 +1,7 @@
 <template>
   <footer class="w-full border-t border-border/10 bg-background">
     <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="flex flex-col items-start gap-4 text-sm">
+      <div class="flex flex-col items-start gap-4 text-xs">
         <div class="text-muted-foreground">
           © {{ currentYear }} Patrick Schmid. All rights reserved.
         </div>

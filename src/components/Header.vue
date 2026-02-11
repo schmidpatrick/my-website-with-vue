@@ -9,20 +9,19 @@
             class="hover:opacity-60 transition-opacity flex items-center gap-2 h-full"
             :class="{ 'sm:block invisible': isOpen }"
           >
-            <ArrowLeft v-if="!isHomePage" :size="20" />
             <span class="font-semibold text-foreground">{{ name }}</span>
           </RouterLink>
 
           <!-- Desktop Navigation Links - Only on homepage -->
-          <div v-if="isHomePage" class="hidden sm:flex h-full gap-8 text-sm">
+          <div v-if="isHomePage" class="hidden sm:flex h-full gap-8 text-xs">
             <button
-              class="text-foreground font-medium hover:opacity-60 transition-opacity flex items-center"
+              class="text-foreground hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('projects')"
             >
               Projects
             </button>
             <button
-              class="text-foreground font-medium hover:opacity-60 transition-opacity flex items-center"
+              class="text-foreground hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('about')"
             >
               About
