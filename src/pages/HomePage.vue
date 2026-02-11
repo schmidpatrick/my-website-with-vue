@@ -12,8 +12,48 @@
       </div>
     </section>
 
+    <RouterLink :to="projects[0].path" class="block group">
+      <section class="w-full bg-section">
+        <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
+          >
+            <!-- Left: Text + CTA -->
+            <div class="space-y-6">
+              <h2 class="text-xl font-medium leading-snug">
+                {{ projects[0].title }}
+              </h2>
+
+              <p class="text-muted-foreground leading-relaxed">
+                {{ projects[0].description }}
+              </p>
+
+              <span
+                class="inline-flex items-center gap-2 text-sm font-medium text-foreground group-hover:underline"
+              >
+                Read the full case study
+                <span aria-hidden>→</span>
+              </span>
+            </div>
+
+            <!-- Right: Mockup -->
+            <div
+              class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-accent"
+            >
+              <!-- Replace with real mockup image -->
+              <ImageWithFallback
+                src="/path/to/mockup.png"
+                alt="App mockup of {{ projects[0].title }}"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </RouterLink>
+
     <!-- Projects Section -->
-    <section class="w-full bg-section">
+    <!-- <section class="w-full bg-section">
       <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         <h2 id="projects" class="mb-8">Selected Projects</h2>
 
@@ -28,7 +68,7 @@
           </RouterLink>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- About Section -->
     <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
