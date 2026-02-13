@@ -1,9 +1,11 @@
 <template>
   <div class="w-full">
     <!-- Hero Section -->
-    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-40">
       <div class="max-w-3xl">
-        <h1>Thoughtful products. Consistent design. Real impact.</h1>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl">
+          Thoughtful products. Consistent design. Real impact.
+        </h1>
         <p class="max-w-2xl">
           I’m a product designer with a background in frontend development —
           combining research, design systems, and visual craft to create
@@ -31,11 +33,11 @@
             </div>
             <!-- Text + CTA -->
             <div class="order-1 md:order-2 space-y-6">
-              <h2 class="text-xl font-medium leading-snug">
+              <h2>
                 {{ projects[0].title }}
               </h2>
 
-              <p class="text-muted-foreground leading-relaxed">
+              <p>
                 {{ projects[0].description }}
               </p>
 

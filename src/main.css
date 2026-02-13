@@ -18,11 +18,11 @@
   }
 
   h1 {
-    @apply text-2xl sm:text-3xl leading-tight tracking-tight mb-8;
+    @apply text-3xl sm:text-4xl leading-tight tracking-tight mb-8;
   }
 
   h2 {
-    @apply text-xl leading-snug;
+    @apply text-2xl leading-snug;
   }
 
   h3 {
