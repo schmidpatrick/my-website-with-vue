@@ -2,7 +2,7 @@
   <header class="fixed top-0 z-50 w-full backdrop-blur-xl bg-background/80">
     <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
       <nav>
-        <div class="flex items-center justify-between h-12">
+        <div class="flex items-center justify-between h-12 md:h-11">
           <!-- Logo/Name - Always on the left -->
           <RouterLink
             to="/"
@@ -13,7 +13,7 @@
           </RouterLink>
 
           <!-- Desktop Navigation Links - Only on homepage -->
-          <div v-if="isHomePage" class="hidden sm:flex h-full gap-8 text-xs">
+          <div v-if="isHomePage" class="hidden md:flex h-full gap-8 text-xs">
             <button
               class="text-foreground hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('projects')"
@@ -31,7 +31,7 @@
           <!-- Mobile Menu Button - Only on homepage -->
           <button
             v-if="isHomePage"
-            class="sm:hidden hover:opacity-60 transition-opacity p-2 -mr-2 z-[60]"
+            class="md:hidden hover:opacity-60 transition-opacity w-12 h-12 flex justify-center items-center -mr-4 z-[60]"
             :aria-label="isOpen ? 'Close menu' : 'Open menu'"
             @click="toggleMenu"
           >
@@ -44,7 +44,7 @@
   <!-- Mobile Menu Overlay -->
   <div
     v-if="isHomePage"
-    class="fixed inset-0 z-40 sm:hidden transition-all duration-500 ease-in-out"
+    class="fixed inset-0 z-40 md:hidden transition-all duration-500 ease-in-out"
     :class="{
       'opacity-100 pointer-events-auto': isOpen,
       'opacity-0 pointer-events-none': !isOpen,
