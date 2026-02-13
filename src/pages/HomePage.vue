@@ -15,7 +15,7 @@
     </section>
 
     <RouterLink :to="projects[0].path" class="block group">
-      <section class="w-full bg-section">
+      <section id="projects" class="w-full bg-section scroll-mt-11">
         <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
