@@ -18,8 +18,19 @@
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
           >
-            <!-- Left: Text + CTA -->
-            <div class="space-y-6">
+            <!-- Mockup -->
+            <div
+              class="order-2 md:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-accent"
+            >
+              <!-- Replace with real mockup image -->
+              <ImageWithFallback
+                src="/path/to/mockup.png"
+                alt="App mockup of {{ projects[0].title }}"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <!-- Text + CTA -->
+            <div class="order-1 md:order-2 space-y-6">
               <h2 class="text-xl font-medium leading-snug">
                 {{ projects[0].title }}
               </h2>
@@ -34,18 +45,6 @@
                 Read the full case study
                 <span aria-hidden>→</span>
               </span>
-            </div>
-
-            <!-- Right: Mockup -->
-            <div
-              class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-accent"
-            >
-              <!-- Replace with real mockup image -->
-              <ImageWithFallback
-                src="/path/to/mockup.png"
-                alt="App mockup of {{ projects[0].title }}"
-                class="w-full h-full object-contain"
-              />
             </div>
           </div>
         </div>
