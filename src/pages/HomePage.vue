@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Hero Section -->
-    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-40">
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-24 sm:py-40">
       <div class="max-w-3xl">
         <h1 class="text-4xl sm:text-5xl md:text-6xl space-y-1">
           <span class="block">Thoughtful products.</span>
@@ -18,7 +18,7 @@
 
     <RouterLink :to="projects[0].path" class="block group">
       <section id="projects" class="w-full bg-section scroll-mt-11">
-        <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div class="max-w-[1024px] mx-auto px-4 sm:px-6 py-20 sm:py-32">
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
           >
@@ -74,7 +74,7 @@
     </section> -->
 
     <!-- About Section -->
-    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-20 sm:py-32">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
         <section>
           <h2 id="about">Behind the Pixels</h2>

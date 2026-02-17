@@ -1,6 +1,6 @@
 <template>
   <header class="fixed top-0 z-50 w-full backdrop-blur-xl bg-background/80">
-    <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1024px] mx-auto px-4 sm:px-6">
       <nav>
         <div class="flex items-center justify-between h-12 md:h-11">
           <!-- Logo/Name - Always on the left -->
