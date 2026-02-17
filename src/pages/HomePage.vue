@@ -24,11 +24,11 @@
           >
             <!-- Mockup -->
             <div
-              class="order-2 md:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-accent"
+              class="order-2 md:order-1 aspect-[4/5] md:aspect-[1/1] overflow-hidden"
             >
               <!-- Replace with real mockup image -->
               <ImageWithFallback
-                src="/path/to/mockup.png"
+                src="/src/assets/images/routes-with-ticket.png"
                 alt="App mockup of {{ projects[0].title }}"
                 class="w-full h-full object-contain"
               />
