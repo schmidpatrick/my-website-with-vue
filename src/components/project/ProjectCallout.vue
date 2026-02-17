@@ -12,7 +12,10 @@ const isQuote = computed(() => props.variant === "quote");
 
 <template>
   <div>
-    <div class="my-12 rounded-3xl p-8 md:p-10 bg-accent/40">
+    <div
+      class="my-12 rounded-3xl bg-accent/40"
+      :class="isQuote ? 'p-8 md:p-10' : 'p-6 md:p-8'"
+    >
       <!-- Quote icon -->
       <Quote
         v-if="isQuote"
@@ -22,7 +25,12 @@ const isQuote = computed(() => props.variant === "quote");
       />
 
       <!-- Callout text -->
-      <div :class="['text-lg leading-relaxed', isQuote ? 'italic' : '']">
+      <div
+        :class="[
+          'text-lg leading-relaxed',
+          isQuote ? 'italic' : 'text-muted-foreground font-medium',
+        ]"
+      >
         <slot />
       </div>
 
