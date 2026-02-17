@@ -3,8 +3,10 @@
     <!-- Hero Section -->
     <section class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-40">
       <div class="max-w-3xl">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl">
-          Thoughtful products. Consistent design. Real impact.
+        <h1 class="text-4xl sm:text-5xl md:text-6xl space-y-1">
+          <span class="block">Thoughtful products.</span>
+          <span class="block">Consistent design.</span>
+          <span class="block font-semibold">Real impact.</span>
         </h1>
         <p class="max-w-2xl">
           I’m a product designer with a background in frontend development —
