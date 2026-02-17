@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: "mobility-app",
     year: "2025",
-    role: "Product Designer",
+    role: "Product Design (UX/UI)",
     timeToRead: 5,
     title: "KVB App Redesign — Restoring Trust in Everyday Mobility",
     description:
