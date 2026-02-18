@@ -26,7 +26,6 @@
             <div
               class="order-2 md:order-1 aspect-[4/5] md:aspect-[1/1] overflow-hidden"
             >
-              <!-- Replace with real mockup image -->
               <ImageWithFallback
                 src="/src/assets/images/routes-with-ticket.png"
                 alt="App mockup of {{ projects[0].title }}"
