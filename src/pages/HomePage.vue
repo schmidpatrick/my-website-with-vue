@@ -75,7 +75,7 @@
 
     <!-- About Section -->
     <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-20 sm:py-32">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         <section>
           <h2 id="about">Behind the Pixels</h2>
           <p>A closer look at what shapes my approach to design.</p>
