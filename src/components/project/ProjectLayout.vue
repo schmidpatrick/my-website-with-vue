@@ -3,7 +3,7 @@
     <div class="max-w-[1024px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
       <div class="md:flex md:gap-24">
         <!-- Main Article -->
-        <article class="flex-1 md:max-w-3xl space-y-16">
+        <article class="flex-1 md:max-w-3xl md:pb-36 space-y-16">
           <slot />
         </article>
 
