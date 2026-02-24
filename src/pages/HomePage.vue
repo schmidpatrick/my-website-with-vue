@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Hero Section -->
-    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-24 sm:py-40">
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-14 sm:py-40">
       <div class="max-w-3xl">
         <h1 class="text-4xl sm:text-5xl md:text-6xl space-y-1">
           <span class="block">Thoughtful products.</span>
@@ -16,31 +16,30 @@
       </div>
     </section>
 
+    <!-- Feature Section -->
     <RouterLink :to="projects[0].path" class="block group">
-      <section id="projects" class="w-full bg-section scroll-mt-11">
-        <div class="max-w-[1024px] mx-auto px-4 sm:px-6 py-20 sm:py-32">
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
-          >
+      <section class="w-full bg-section scroll-mt-11">
+        <div class="max-w-[1024px] mx-auto px-4 sm:px-6 py-14 sm:py-40">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <!-- Mockup -->
-            <div
-              class="order-2 md:order-1 aspect-[4/5] md:aspect-[1/1] overflow-hidden"
-            >
+            <div class="flex justify-center">
               <ImageWithFallback
-                src="/src/assets/images/routes-with-ticket.png"
-                alt="App mockup of {{ projects[0].title }}"
-                class="w-full h-full object-contain"
+                src="/src/assets/images/route-details-with-ticket.png"
+                alt="Route details screen showing a map with the selected route and a bottom sheet with departure time, list of stops, travel duration and purchased ticket."
+                class="w-4/5 object-contain drop-shadow-phone"
               />
             </div>
             <!-- Text + CTA -->
-            <div class="order-1 md:order-2 space-y-6">
-              <h2>
-                {{ projects[0].title }}
-              </h2>
+            <div class="space-y-10">
+              <div class="space-y-6">
+                <h2 id="projects">
+                  {{ projects[0].title }}
+                </h2>
 
-              <p>
-                {{ projects[0].description }}
-              </p>
+                <p>
+                  {{ projects[0].description }}
+                </p>
+              </div>
 
               <span
                 class="inline-flex items-center gap-2 text-sm font-medium text-foreground group-hover:underline"
@@ -73,8 +72,8 @@
     </section> -->
 
     <!-- About Section -->
-    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-20 sm:py-32">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-14 sm:py-40">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
         <section>
           <h2 id="about">Behind the Pixels</h2>
           <p>A closer look at what shapes my approach to design.</p>
@@ -131,7 +130,6 @@
 import { onMounted } from "vue";
 import { useRoute, RouterLink } from "vue-router";
 import { projects } from "../data/projects";
-import ProjectCard from "@/components/project/ProjectCard.vue";
 import ImageWithFallback from "../components/ImageWithFallback.vue";
 import { Linkedin, Github } from "lucide-vue-next"; // Vue version of lucide-react
 

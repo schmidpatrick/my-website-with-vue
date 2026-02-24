@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      dropShadow: {
+        phone: ["0 18px 35px rgba(0,0,0,0.14)", "0 6px 12px rgba(0,0,0,0.06)"],
+      },
       colors: {
         background: "oklch(var(--background) / <alpha-value>)",
         foreground: "oklch(var(--foreground) / <alpha-value>)",
