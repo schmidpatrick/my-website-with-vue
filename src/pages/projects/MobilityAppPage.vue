@@ -121,9 +121,35 @@
     <section>
       <h2 id="visual-redesign">Visual Redesign</h2>
       <p>
-        The visual update focused on
-        <strong>clarity, consistency, and modernity</strong>:
+        The redesign focused on
+        <strong>clarity, hierarchy, and a calmer tone</strong> — ensuring that
+        every screen communicates the next step with confidence.
       </p>
+      <section class="space-y-4">
+        <h3>Immediate Clarity from the First Tap</h3>
+        <p>
+          In time-sensitive situations, even small delays can create
+          uncertainty. As soon as users begin typing, contextual suggestions
+          appear — helping them quickly find their destination without
+          second-guessing. The cleaner layout and clearer hierarchy create a
+          sense of immediacy and control.
+        </p>
+        <figure class="space-y-4">
+          <div
+            class="aspect-[1/1] md:aspect-[5/3] flex justify-center items-start pt-16 overflow-hidden rounded-3xl bg-accent/40"
+          >
+            <ImageWithFallback
+              src="/src/assets/images/search-destination.png"
+              alt="alt"
+              class="w-4/5 md:w-1/2 object-cover drop-shadow-phone"
+            />
+          </div>
+        </figure>
+        <p>
+          Frequently used destinations remain easily accessible through recent
+          searches and favorites, supporting habitual travel patterns.
+        </p>
+      </section>
       <ProjectBulletList>
         <ProjectBulletListItem
           >Dynamic color system, with strong contrasts for accessibility and a
@@ -188,7 +214,7 @@
 import ProjectLayout from "@/components/project/ProjectLayout.vue";
 import ProjectHeader from "@/components/project/ProjectHeader.vue";
 import ProjectBulletList from "@/components/project/ProjectBulletList.vue";
-import ProjectImage from "@/components/project/ProjectImage.vue";
+import ImageWithFallback from "@/components/ImageWithFallback.vue";
 import ProjectCallout from "@/components/project/ProjectCallout.vue";
 import ProjectBulletListItem from "@/components/project/ProjectBulletListItem.vue";
 </script>
