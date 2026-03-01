@@ -7,16 +7,10 @@
         </div>
         <div class="flex flex-row flex-wrap items-start gap-4 sm:gap-8">
           <RouterLink
-            to="/legal-notice"
+            to="/privacy-policy"
             class="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Legal Notice
-          </RouterLink>
-          <RouterLink
-            to="/privacy"
-            class="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Privacy
+            Privacy Policy
           </RouterLink>
         </div>
       </div>
