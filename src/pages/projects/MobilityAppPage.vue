@@ -122,53 +122,145 @@
       <h2 id="visual-redesign">Visual Redesign</h2>
       <p>
         The redesign focused on
-        <strong>clarity, hierarchy, and a calmer tone</strong> — ensuring that
-        every screen communicates the next step with confidence.
+        <strong>clarity, hierarchy, and a calmer tone</strong>
+        — ensuring that each step of the journey communicates what happens next,
+        without hesitation.
       </p>
-      <section class="space-y-4">
-        <h3>Immediate Clarity from the First Tap</h3>
+      <section>
+        <h3 class="pt-4">Clarity from the First Tap</h3>
         <p>
-          In time-sensitive situations, even small delays can create
-          uncertainty. As soon as users begin typing, contextual suggestions
-          appear — helping them quickly find their destination without
-          second-guessing. The cleaner layout and clearer hierarchy create a
-          sense of immediacy and control.
+          In time-sensitive situations, even small delays create uncertainty. As
+          soon as users begin typing, contextual suggestions appear — helping
+          them find their destination quickly and without second-guessing.
+        </p>
+        <p>
+          Frequently used destinations remain accessible through recent searches
+          and favorites, supporting habitual travel patterns.
         </p>
         <figure class="space-y-4">
           <div
-            class="aspect-[1/1] md:aspect-[5/3] flex justify-center items-start pt-16 overflow-hidden rounded-3xl bg-accent/40"
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start pt-12 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
               src="/src/assets/images/search-destination.png"
               alt="alt"
-              class="w-4/5 md:w-1/2 object-cover drop-shadow-phone"
+              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
             />
           </div>
         </figure>
         <p>
-          Frequently used destinations remain easily accessible through recent
-          searches and favorites, supporting habitual travel patterns.
+          The result is a search experience that feels immediate and
+          predictable.
         </p>
       </section>
-      <ProjectBulletList>
-        <ProjectBulletListItem
-          >Dynamic color system, with strong contrasts for accessibility and a
-          personalized UI, makes the app feel baked into the system
-        </ProjectBulletListItem>
-        <ProjectBulletListItem
-          >Updated typography for improved legibility
-        </ProjectBulletListItem>
-        <ProjectBulletListItem
-          >Visual hierarchy that emphasizes the "next step" in the journey
-        </ProjectBulletListItem>
-        <ProjectBulletListItem
-          >Calmer tone and more breathing space to convey reliability
-        </ProjectBulletListItem>
-      </ProjectBulletList>
-      <p>
-        High-fidelity screens illustrate a unified experience — one that looks
-        current and feels trustworthy.
-      </p>
+      <section>
+        <h3 class="pt-4">The Fastest Route, Instantly Clear</h3>
+        <p>
+          Route comparison centers on what matters most:
+          <strong>duration and transfers</strong>. The fastest connection
+          appears first, while visual hierarchy emphasizes total travel time and
+          required changes.
+        </p>
+        <p>
+          Routes and filters are accessed through a single expandable bottom
+          sheet layered over the map. The sheet can be expanded for deeper
+          comparison or collapsed to maintain spatial context — keeping
+          orientation intact while exploring alternatives.
+        </p>
+        <figure class="space-y-4">
+          <div
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pb-36 overflow-hidden rounded-3xl bg-accent/40"
+          >
+            <ImageWithFallback
+              src="/src/assets/images/route-list-full.png"
+              alt="alt"
+              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
+            />
+          </div>
+        </figure>
+        <p>
+          Users can scan, compare, and decide without losing their sense of
+          place.
+        </p>
+      </section>
+      <section>
+        <h3 class="pt-4">A Journey That Explains Itself</h3>
+        <p>
+          The route details screen brings structure to the full journey.
+          Departure time, transfers, and the next required action are clearly
+          prioritized, while the map provides spatial reassurance.
+        </p>
+        <p>
+          Information is grouped to reduce cognitive load and highlight what
+          needs attention now — not everything at once.
+        </p>
+        <figure class="space-y-4">
+          <div
+            class="flex justify-center items-start py-12 my-16 overflow-hidden rounded-3xl bg-accent/40"
+          >
+            <ImageWithFallback
+              src="/src/assets/images/route-details-with-ticket.png"
+              alt="alt"
+              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
+            />
+          </div>
+        </figure>
+        <p>Clarity here turns planning into confident action.</p>
+      </section>
+      <section>
+        <h3 class="pt-4">Purchasing Without Breaking the Flow</h3>
+        <p>
+          Ticket purchase happens directly within the route details view. The
+          ticket matching the selected route is preselected, allowing users to
+          complete the purchase with a single tap.
+        </p>
+        <p>
+          During processing, a subtle loading state appears in place — keeping
+          context intact. Once successful, the purchased ticket is displayed
+          inside the same bottom sheet and can be collapsed to refocus on the
+          journey.
+        </p>
+        <figure class="space-y-4">
+          <div
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start py-12 overflow-hidden rounded-3xl bg-accent/40"
+          >
+            <ImageWithFallback
+              src="/src/assets/images/route-details-ticket-bottom-sheet.png"
+              alt="alt"
+              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
+            />
+          </div>
+        </figure>
+        <p>
+          The transition from planning to purchase feels seamless and
+          uninterrupted.
+        </p>
+      </section>
+      <section>
+        <h3 class="pt-4">Guidance That Moves With You</h3>
+        <p>
+          During the journey, the current step is highlighted within the bottom
+          sheet. As progress continues, the interface automatically scrolls to
+          the relevant instruction, keeping users oriented without manual
+          adjustment.
+        </p>
+        <p>
+          A corresponding arrow on the map subtly pulsates to indicate the
+          current location and reinforce spatial awareness.
+        </p>
+        <figure class="space-y-4">
+          <div
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pt-14 overflow-hidden rounded-3xl bg-accent/40"
+          >
+            <ImageWithFallback
+              src="/src/assets/images/on-the-way.png"
+              alt="alt"
+              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
+            />
+          </div>
+        </figure>
+        <p>Guidance stays visible. The journey stays predictable.</p>
+      </section>
     </section>
 
     <!-- Outcome -->
