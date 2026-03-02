@@ -14,7 +14,7 @@
   h2,
   h3,
   h4 {
-    @apply scroll-mt-24 font-medium;
+    @apply scroll-mt-24 font-medium text-foreground;
   }
 
   h1 {
