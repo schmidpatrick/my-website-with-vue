@@ -68,21 +68,25 @@
           increasing cognitive load in time-sensitive situations.
         </ProjectBulletListItem>
       </ProjectBulletList>
+      <p>
+        These findings revealed that rebuilding trust wasn’t a technical
+        challenge — it was a communication and clarity problem.
+      </p>
     </section>
 
     <!-- Design Challenge -->
     <section>
       <h2 id="design-challenge">Design Challenge</h2>
-      <p>Based on these findings, I defined my challenge:</p>
+      <p>These insights reframed the problem into a clear design challenge:</p>
       <ProjectCallout variant="highlight">
-        How might I make the KVB app feel more reliable, intuitive, and visually
-        clear — even within the limits of real-time data accuracy?
+        How might I restore trust at critical journey moments through clearer
+        communication and reduced cognitive load?
       </ProjectCallout>
     </section>
 
     <!-- Framing -->
     <section>
-      <h2 id="framing">Framing the Experience</h2>
+      <h2 id="framing">User Scenario</h2>
       <p>
         For the bootcamp pitch, I structured the redesign around a simple,
         relatable story:
@@ -91,43 +95,46 @@
         Getting to a dentist appointment on time.
       </ProjectCallout>
       <p>
-        It's an everyday journey — familiar, time-bound, and slightly
-        stressfull. This narrative helped ground the user flow and communicate
-        design decisions clearly to both designers and non-designers.
+        It’s an everyday journey — familiar, time-bound, and subtly stressful.
+        This narrative helped ground the user flow and communicate design
+        decisions clearly to both designers and non-designers.
       </p>
     </section>
 
-    <!-- Design Focus -->
+    <!-- Design Strategy -->
     <section>
-      <h2 id="design-focus">Design Focus</h2>
-      <p>I focused on three key touchpoints of the user journey:</p>
+      <h2 id="design-strategy">Design Strategy</h2>
+      <p>
+        Rather than redesigning the entire app, I focused on the moments where
+        trust is most fragile.
+      </p>
       <ProjectBulletList>
         <ProjectBulletListItem>
-          <strong>Looking up routes:</strong> A cleaner search interface and
-          stronger hierarchy help users make quick, confident decisions.
+          <strong>Looking up routes:</strong> A clearer hierarchy helps users
+          compare options quickly and decide with confidence.
         </ProjectBulletListItem>
         <ProjectBulletListItem>
-          <strong>Buying a ticket:</strong> Simplified flows and clearer system
-          feedback reduce friction and hesitation.
+          <strong>Buying a ticket:</strong> Streamlined steps and transparent
+          system feedback reduce hesitation at the point of commitment.
         </ProjectBulletListItem>
         <ProjectBulletListItem>
           <strong>Assistance while on the way:</strong> Contextual guidance and
-          micro-interactions reassure users when plans change.
+          timely updates reinforce reliability when plans change.
         </ProjectBulletListItem>
       </ProjectBulletList>
     </section>
 
-    <!-- Visual Redesign -->
+    <!-- Interaction & Interface Design -->
     <section>
-      <h2 id="visual-redesign">Visual Redesign</h2>
+      <h2 id="interaction-interface-design">Interaction & Interface Design</h2>
       <p>
         The redesign focused on
-        <strong>clarity, hierarchy, and a calmer tone</strong>
-        — ensuring that each step of the journey communicates what happens next,
-        without hesitation.
+        <strong>clarity, hierarchy, and a calmer tone</strong>, using deliberate
+        interface states and feedback to ensure each step of the journey
+        communicates what happens next — without hesitation.
       </p>
       <section>
-        <h3 class="pt-4">Clarity from the First Tap</h3>
+        <h3 class="pt-4">Immediate Feedback During Search</h3>
         <p>
           In time-sensitive situations, even small delays create uncertainty. As
           soon as users begin typing, contextual suggestions appear — helping
@@ -154,7 +161,7 @@
         </p>
       </section>
       <section>
-        <h3 class="pt-4">The Fastest Route, Instantly Clear</h3>
+        <h3 class="pt-4">Route Comparison & Dynamic States</h3>
         <p>
           Route comparison centers on what matters most:
           <strong>duration and transfers</strong>. The fastest connection
@@ -184,7 +191,7 @@
         </p>
       </section>
       <section>
-        <h3 class="pt-4">A Journey That Explains Itself</h3>
+        <h3 class="pt-4">Route Details & Contextual Hierarchy</h3>
         <p>
           The route details screen brings structure to the full journey.
           Departure time, transfers, and the next required action are clearly
@@ -208,7 +215,7 @@
         <p>Clarity here turns planning into confident action.</p>
       </section>
       <section>
-        <h3 class="pt-4">Purchasing Without Breaking the Flow</h3>
+        <h3 class="pt-4">Seamless Ticket Interaction</h3>
         <p>
           Ticket purchase happens directly within the route details view. The
           ticket matching the selected route is preselected, allowing users to
@@ -237,7 +244,7 @@
         </p>
       </section>
       <section>
-        <h3 class="pt-4">Guidance That Moves With You</h3>
+        <h3 class="pt-4">Dynamic Guidance & Location Feedback</h3>
         <p>
           During the journey, the current step is highlighted within the bottom
           sheet. As progress continues, the interface automatically scrolls to
@@ -282,7 +289,7 @@
 
     <!-- Reflection -->
     <section>
-      <h2 id="reflection">Reflection</h2>
+      <h2 id="design-perspective">Design Perspective</h2>
       <p>
         This project changed how I think about design for public services. Trust
         isn't just built with data — it's built through
@@ -297,6 +304,9 @@
         <strong>design stories are about people</strong> — not features. Whether
         it's a commute or a dentist appointment, every journey deserves to feel
         reliable.
+      </p>
+      <p>
+        That belief continues to guide how I approach complex systems today.
       </p>
     </section>
   </ProjectLayout>
