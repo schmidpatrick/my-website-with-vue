@@ -91,26 +91,6 @@
             Beyond the screen, you’ll likely find me longboarding along the
             Rhine, refining latte art, or getting lost in music.
           </p>
-          <!-- <div class="inline-flex flex-col gap-6 mt-8">
-            <a
-              href="https://linkedin.com/in/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Linkedin class="w-5 h-5" />
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Github class="w-5 h-5" />
-              <span>GitHub</span>
-            </a>
-          </div> -->
         </section>
 
         <div class="aspect-[4/5] bg-accent rounded-3xl overflow-hidden">
@@ -132,7 +112,6 @@ import { projects } from "../data/projects";
 import ImageWithFallback from "../components/ImageWithFallback.vue";
 import routeDetailsWithTicket from "@/assets/images/route-details-with-ticket.png";
 import patrickMedium from "@/assets/images/patrick-medium.png";
-import { Linkedin, Github } from "lucide-vue-next"; // Vue version of lucide-react
 
 const route = useRoute();
 
