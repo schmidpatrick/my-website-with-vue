@@ -115,7 +115,7 @@
 
         <div class="aspect-[4/5] bg-accent rounded-3xl overflow-hidden">
           <ImageWithFallback
-            src="/src/assets/images/patrick-medium.png"
+            :src="patrickMedium"
             alt="An image of myself"
             class="w-full h-full object-cover"
           />
@@ -131,6 +131,7 @@ import { useRoute, RouterLink } from "vue-router";
 import { projects } from "../data/projects";
 import ImageWithFallback from "../components/ImageWithFallback.vue";
 import routeDetailsWithTicket from "@/assets/images/route-details-with-ticket.png";
+import patrickMedium from "@/assets/images/patrick-medium.png";
 import { Linkedin, Github } from "lucide-vue-next"; // Vue version of lucide-react
 
 const route = useRoute();

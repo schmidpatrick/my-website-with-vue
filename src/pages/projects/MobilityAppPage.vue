@@ -149,7 +149,7 @@
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start pt-12 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
-              src="/src/assets/images/search-destination.png"
+              :src="searchDestination"
               alt="alt"
               class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
             />
@@ -179,7 +179,7 @@
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pb-36 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
-              src="/src/assets/images/route-list-full.png"
+              :src="routeListFull"
               alt="alt"
               class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
             />
@@ -206,7 +206,7 @@
             class="flex justify-center items-start py-12 my-16 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
-              src="/src/assets/images/route-details-with-ticket.png"
+              :src="routeDetailsWithTicket"
               alt="alt"
               class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
             />
@@ -232,7 +232,7 @@
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start py-12 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
-              src="/src/assets/images/route-details-ticket-bottom-sheet.png"
+              :src="routeDetailsTicketBottomSheet"
               alt="alt"
               class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
             />
@@ -260,7 +260,7 @@
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pt-14 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
-              src="/src/assets/images/on-the-way.png"
+              :src="onTheWay"
               alt="alt"
               class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
             />
@@ -319,4 +319,9 @@ import ProjectBulletList from "@/components/project/ProjectBulletList.vue";
 import ImageWithFallback from "@/components/ImageWithFallback.vue";
 import ProjectCallout from "@/components/project/ProjectCallout.vue";
 import ProjectBulletListItem from "@/components/project/ProjectBulletListItem.vue";
+import searchDestination from "@/assets/images/search-destination.png";
+import routeListFull from "@/assets/images/route-list-full.png";
+import routeDetailsWithTicket from "@/assets/images/route-details-with-ticket.png";
+import routeDetailsTicketBottomSheet from "@/assets/images/route-details-ticket-bottom-sheet.png";
+import onTheWay from "@/assets/images/on-the-way.png";
 </script>
