@@ -14,6 +14,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Debug - show files
+        run: |
+          ls -la
+          cat package.json
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -25,6 +30,10 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Debug - show dist content
+        run: |
+          ls -la dist
 
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
