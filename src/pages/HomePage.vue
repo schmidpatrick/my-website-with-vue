@@ -24,7 +24,7 @@
             <!-- Mockup -->
             <div class="flex justify-center">
               <ImageWithFallback
-                src="/src/assets/images/route-details-with-ticket.png"
+                :src="routeDetailsWithTicket"
                 alt="Route details screen showing a map with the selected route and a bottom sheet with departure time, list of stops, travel duration and purchased ticket."
                 class="w-4/5 object-contain drop-shadow-phone"
               />
@@ -130,6 +130,7 @@ import { onMounted } from "vue";
 import { useRoute, RouterLink } from "vue-router";
 import { projects } from "../data/projects";
 import ImageWithFallback from "../components/ImageWithFallback.vue";
+import routeDetailsWithTicket from "@/assets/images/route-details-with-ticket.png";
 import { Linkedin, Github } from "lucide-vue-next"; // Vue version of lucide-react
 
 const route = useRoute();
