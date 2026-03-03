@@ -26,14 +26,12 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H ssh.strato.de >> ~/.ssh/known_hosts
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      - name: Deploy dist folder
+      - name: Deploy dist folder to Strato
         run: |
-          rsync -avz --delete --progress dist/ \
-          ${{ secrets.USER_IP }}:${{ secrets.ABS_PATH }}
+          sshpass -p "${{ secrets.USER_PASSWORD }}" rsync -avz --delete --progress \
+          -e "ssh -o StrictHostKeyChecking=no" \
+          dist/ \
+          ${{ secrets.USER }}@${{ secrets.USER_IP }}:${{ secrets.ABS_PATH }}
