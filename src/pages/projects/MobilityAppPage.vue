@@ -146,7 +146,7 @@
         </p>
         <figure class="space-y-4">
           <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start pt-12 overflow-hidden rounded-3xl bg-accent/40"
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start pt-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
               :src="searchDestination"
@@ -176,7 +176,7 @@
         </p>
         <figure class="space-y-4">
           <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pb-36 overflow-hidden rounded-3xl bg-accent/40"
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pb-36 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
               :src="routeListFull"
@@ -203,7 +203,7 @@
         </p>
         <figure class="space-y-4">
           <div
-            class="flex justify-center items-start py-12 my-16 overflow-hidden rounded-3xl bg-accent/40"
+            class="flex justify-center items-start py-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
               :src="routeDetailsWithTicket"
@@ -229,7 +229,7 @@
         </p>
         <figure class="space-y-4">
           <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start py-12 overflow-hidden rounded-3xl bg-accent/40"
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start py-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
               :src="routeDetailsTicketBottomSheet"
@@ -257,7 +257,7 @@
         </p>
         <figure class="space-y-4">
           <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pt-14 overflow-hidden rounded-3xl bg-accent/40"
+            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pt-14 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
             <ImageWithFallback
               :src="onTheWay"
