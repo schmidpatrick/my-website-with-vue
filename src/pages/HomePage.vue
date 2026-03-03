@@ -1,17 +1,17 @@
 <template>
   <div class="w-full">
     <!-- Hero Section -->
-    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-14 sm:py-40">
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-20 sm:py-40">
       <div class="max-w-3xl">
         <h1 class="text-4xl sm:text-5xl md:text-6xl space-y-1">
           <span class="block">Thoughtful products.</span>
           <span class="block">Consistent design.</span>
           <span class="block font-semibold">Real impact.</span>
         </h1>
-        <p class="max-w-2xl">
-          I’m a product designer with a background in frontend development —
-          combining research, design systems, and visual craft to create
-          intuitive experiences that make a difference.
+        <p class="max-w-xl text-lg leading-relaxed">
+          I design digital products with a deep understanding of how they’re
+          built — aligning research, systems thinking, and visual craft into
+          intuitive, scalable experiences.
         </p>
       </div>
     </section>
@@ -76,17 +76,16 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
         <section>
           <h2 id="about">Behind the Pixels</h2>
-          <p>A closer look at what shapes my approach to design.</p>
+          <p>How I think, create, and bring digital products to life.</p>
           <p>
-            Since 2016, I’ve been working with startups and small teams to turn
-            ideas into digital products — tackling complex challenges through
-            clarity, structure, and thoughtful detail.
+            I collaborate with startups and small teams to transform ideas into
+            digital products — tackling complex challenges with clarity,
+            structure, and thoughtful detail.
           </p>
           <p>
-            My background in frontend development informs how I design. It’s
-            where I learned to value systems, precision, and the small decisions
-            that shape how something feels — guiding me to create experiences
-            that are intuitive, consistent, and built to last.
+            I approach design holistically, thinking in systems while staying
+            grounded in practical implementation. This enables me to create
+            experiences that are intuitive, consistent, and built to scale.
           </p>
           <p>
             Beyond the screen, you’ll likely find me longboarding along the
