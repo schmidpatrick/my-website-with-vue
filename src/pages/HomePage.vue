@@ -2,7 +2,7 @@
   <div class="w-full">
     <!-- Hero Section -->
     <section
-      class="flex flex-col items-center justify-center mx-auto px-4 sm:px-6 h-[90vh] space-y-16"
+      class="min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-center mx-auto px-4 sm:px-6 space-y-16"
     >
       <h1
         class="text-[clamp(2rem,4vw,4rem)] text-center font-semibold leading-none my-0"
