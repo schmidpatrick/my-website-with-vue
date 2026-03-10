@@ -1,19 +1,25 @@
 <template>
   <div class="w-full">
     <!-- Hero Section -->
-    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-20 sm:py-40">
-      <div class="max-w-3xl">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl space-y-1">
-          <span class="block">Thoughtful products.</span>
-          <span class="block">Consistent design.</span>
-          <span class="block font-semibold">Real impact.</span>
-        </h1>
-        <p class="max-w-xl text-lg leading-relaxed">
-          I design digital products with a deep understanding of how they’re
-          built — aligning research, systems thinking, and visual craft into
-          intuitive, scalable experiences.
-        </p>
-      </div>
+    <section
+      class="flex flex-col items-center justify-center mx-auto px-4 sm:px-6 h-[90vh] space-y-16"
+    >
+      <h1
+        class="text-[clamp(2rem,4vw,4rem)] text-center font-semibold leading-none my-0"
+      >
+        <span class="block"
+          >I design <span class="text-primary">digital products</span></span
+        >
+        <span class="block"
+          >with a deep understanding of how they're built</span
+        >
+      </h1>
+      <button
+        class="flex px-8 py-4 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
+        @click="scrollToSection('projects')"
+      >
+        View my latest project
+      </button>
     </section>
 
     <!-- Feature Section -->
@@ -126,4 +132,9 @@ onMounted(() => {
     }, 100);
   }
 });
+
+function scrollToSection(sectionId: string) {
+  const element = document.getElementById(sectionId);
+  if (element) element.scrollIntoView({ behavior: "smooth" });
+}
 </script>
