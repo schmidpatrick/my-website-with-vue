@@ -15,10 +15,12 @@
         >
       </h1>
       <button
-        class="flex px-8 py-4 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
+        class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
         @click="scrollToSection('projects')"
       >
         View my latest project
+
+        <Icon icon="material-symbols:arrow-downward-rounded" width="24" />
       </button>
     </section>
 
@@ -115,6 +117,7 @@
 import { onMounted } from "vue";
 import { useRoute, RouterLink } from "vue-router";
 import { projects } from "../data/projects";
+import { Icon } from "@iconify/vue";
 import ImageWithFallback from "../components/ImageWithFallback.vue";
 import routeDetailsWithTicket from "@/assets/images/route-details-with-ticket.png";
 import patrickMedium from "@/assets/images/patrick-medium.png";
