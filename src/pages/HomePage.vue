@@ -19,47 +19,66 @@
         @click="scrollToSection('projects')"
       >
         View my latest project
-
         <Icon icon="material-symbols:arrow-downward-rounded" width="24" />
       </button>
     </section>
 
     <!-- Feature Section -->
-    <RouterLink :to="projects[0].path" class="block group">
-      <section class="w-full bg-section scroll-mt-11">
-        <div class="max-w-[1024px] mx-auto px-4 sm:px-6 py-14 sm:py-40">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-            <!-- Mockup -->
-            <div class="flex justify-center">
-              <ImageWithFallback
-                :src="routeDetailsWithTicket"
-                alt="Route details screen showing a map with the selected route and a bottom sheet with departure time, list of stops, travel duration and purchased ticket."
-                class="w-4/5 object-contain drop-shadow-phone"
-              />
-            </div>
-            <!-- Text + CTA -->
-            <div class="space-y-10">
-              <div class="space-y-6">
-                <h2 id="projects">
-                  {{ projects[0].title }}
-                </h2>
+    <section class="w-full px-4 sm:px-6 py-14 sm:py-40 bg-section">
+      <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-center">
+        <!-- Phone -->
+        <RouterLink
+          id="projects"
+          :to="projects[0].path"
+          class="mx-auto max-w-xs sm:col-start-2 drop-shadow-phone"
+        >
+          <ImageWithFallback
+            :src="routeDetailsWithTicket"
+            alt="Route details screen showing a map with the selected route and a bottom sheet with departure time, list of stops, travel duration and purchased ticket."
+          />
+        </RouterLink>
 
-                <p>
-                  {{ projects[0].description }}
-                </p>
-              </div>
+        <!-- Metadata -->
+        <div
+          class="mx-auto max-w-xs grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-6 sm:gap-y-10 sm:col-start-3 mt-16 sm:mt-0 sm:ml-9 sm:-translate-y-4"
+        >
+          <div>
+            <p class="text-sm font-semibold">Role</p>
+            <p class="text-sm">{{ projects[0].role }}</p>
+          </div>
 
-              <span
-                class="inline-flex items-center gap-2 text-sm font-medium text-foreground group-hover:underline"
-              >
-                Read the full case study
-                <span aria-hidden>→</span>
-              </span>
-            </div>
+          <div>
+            <p class="text-sm font-semibold">Focus</p>
+            <p class="text-sm">{{ projects[0].focus }}</p>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold">Scope</p>
+            <p class="text-sm">{{ projects[0].scope }}</p>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold">Year</p>
+            <p class="text-sm">{{ projects[0].year }}</p>
           </div>
         </div>
-      </section>
-    </RouterLink>
+      </div>
+      <div class="flex flex-col items-center">
+        <div
+          class="flex flex-col items-center mt-8 sm:mt-20 text-center space-y-7"
+        >
+          <h2 class="max-w-md text-balance">{{ projects[0].title }}</h2>
+          <p class="max-w-sm text-balance">{{ projects[0].description }}</p>
+        </div>
+        <RouterLink
+          :to="projects[0].path"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 mt-10 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
+        >
+          View case study
+          <Icon icon="material-symbols:arrow-forward-rounded" width="24" />
+        </RouterLink>
+      </div>
+    </section>
 
     <!-- Projects Section -->
     <!-- <section class="w-full bg-section">

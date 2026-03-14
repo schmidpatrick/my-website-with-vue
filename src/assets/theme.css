@@ -3,7 +3,7 @@ NOTE:
 Color values use oklch (L-C-H) color space! 
 */
 :root {
-  --oklch-check: oklch(.985 0 0);
+  --oklch-check: oklch(55.458% 0.02621 285.488);
   --background: 100% 0.00011 271.152;
   --foreground: .145 0 0;
   --section: 97.072% 0.00276 285.755;

@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       dropShadow: {
-        phone: ["0 18px 35px rgba(0,0,0,0.14)", "0 6px 12px rgba(0,0,0,0.06)"],
+        phone: ["0 20px 40px rgba(0,0,0,0.15)", "0 8px 16px rgba(0,0,0,0.06)"],
       },
       colors: {
         background: "oklch(var(--background) / <alpha-value>)",
