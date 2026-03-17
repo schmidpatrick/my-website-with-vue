@@ -5,14 +5,14 @@
       class="min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-center mx-auto px-4 sm:px-6 space-y-16"
     >
       <h1
-        class="text-[clamp(2rem,4vw,4rem)] text-center font-semibold leading-none my-0"
+        class="text-[clamp(2rem,5vw,4rem)] text-center text-balance font-semibold leading-none my-0"
       >
         <span class="block"
-          >I design <span class="text-primary">digital products</span></span
+          >I design
+          <span class="text-primary">digital&nbsp;products</span></span
         >
-        <span class="block"
-          >with a deep understanding of how they're built</span
-        >
+        <span class="block">with a deep understanding</span>
+        <span class="block">of how they're built</span>
       </h1>
       <button
         class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
