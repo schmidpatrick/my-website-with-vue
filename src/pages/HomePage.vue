@@ -16,7 +16,7 @@
       </h1>
       <button
         class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
-        @click="scrollToSection('projects')"
+        @click="scrollToSection('featured-project')"
       >
         View my latest project
         <Icon icon="material-symbols:arrow-downward-rounded" width="24" />
@@ -25,10 +25,12 @@
 
     <!-- Feature Section -->
     <section class="w-full px-4 sm:px-6 py-14 sm:py-40 bg-section">
-      <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-center">
+      <div
+        id="featured-project"
+        class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-center scroll-mt-24"
+      >
         <!-- Phone -->
         <RouterLink
-          id="projects"
           :to="projects[0].path"
           class="mx-auto max-w-xs sm:col-start-2 drop-shadow-phone"
         >
