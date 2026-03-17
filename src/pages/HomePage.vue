@@ -2,7 +2,7 @@
   <div class="w-full">
     <!-- Hero Section -->
     <section
-      class="min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-center mx-auto px-4 sm:px-6 space-y-16"
+      class="min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-center mx-auto px-4 sm:px-6 space-y-14"
     >
       <h1
         class="text-[clamp(2rem,5vw,4rem)] text-center text-balance font-semibold leading-none my-0"
@@ -15,11 +15,15 @@
         <span class="block">of how they're built</span>
       </h1>
       <button
-        class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
+        class="inline-flex items-center justify-center gap-2 px-8 py-4 text-primary font-medium hover:opacity-80 transition-opacity"
         @click="scrollToSection('featured-project')"
       >
         View my latest project
-        <Icon icon="material-symbols:arrow-downward-rounded" width="24" />
+        <Icon
+          icon="material-symbols:arrow-downward-rounded"
+          width="24"
+          class="animate-nudge-down motion-reduce:animate-none"
+        />
       </button>
     </section>
 
@@ -74,7 +78,7 @@
         </div>
         <RouterLink
           :to="projects[0].path"
-          class="inline-flex items-center justify-center gap-2 px-8 py-4 mt-10 rounded-full bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 mt-10 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-80 transition-opacity"
         >
           View case study
           <Icon icon="material-symbols:arrow-forward-rounded" width="24" />
