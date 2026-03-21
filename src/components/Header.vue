@@ -16,7 +16,7 @@
           <div v-if="isHomePage" class="hidden md:flex h-full gap-8 text-xs">
             <button
               class="text-foreground hover:opacity-60 transition-opacity flex items-center"
-              @click="scrollToSection('projects')"
+              @click="scrollToSection('featured-project')"
             >
               Projects
             </button>
