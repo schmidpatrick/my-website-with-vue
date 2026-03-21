@@ -27,6 +27,7 @@
     "@typescript-eslint/parser": "^8.46.1",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/eslint-config-typescript": "^14.6.0",
+    "baseline-browser-mapping": "^2.10.9",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^9.33.0",
