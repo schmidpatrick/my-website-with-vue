@@ -9,11 +9,11 @@ defineProps<{
 </script>
 
 <template>
-  <figure class="space-y-4">
+  <figure>
     <div class="overflow-hidden rounded-lg bg-accent">
       <ImageWithFallback :src="src" :alt="alt" class="w-full h-auto" />
     </div>
-    <figcaption v-if="caption" class="text-muted-foreground text-center">
+    <figcaption v-if="caption" class="text-muted-foreground text-center mt-4">
       {{ caption }}
     </figcaption>
   </figure>

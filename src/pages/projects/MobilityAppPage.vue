@@ -144,7 +144,7 @@
           Frequently used destinations remain accessible through recent searches
           and favorites, supporting habitual travel patterns.
         </p>
-        <figure class="space-y-4">
+        <figure>
           <div
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start pt-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
@@ -174,7 +174,7 @@
           comparison or collapsed to maintain spatial context — keeping
           orientation intact while exploring alternatives.
         </p>
-        <figure class="space-y-4">
+        <figure>
           <div
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pb-36 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
@@ -201,7 +201,7 @@
           Information is grouped to reduce cognitive load and highlight what
           needs attention now — not everything at once.
         </p>
-        <figure class="space-y-4">
+        <figure>
           <div
             class="flex justify-center items-start py-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
@@ -227,7 +227,7 @@
           inside the same bottom sheet and can be collapsed to refocus on the
           journey.
         </p>
-        <figure class="space-y-4">
+        <figure>
           <div
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start py-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >
@@ -255,7 +255,7 @@
           A corresponding arrow on the map subtly pulsates to indicate the
           current location and reinforce spatial awareness.
         </p>
-        <figure class="space-y-4">
+        <figure>
           <div
             class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pt-14 my-10 overflow-hidden rounded-3xl bg-accent/40"
           >

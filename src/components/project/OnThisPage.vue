@@ -1,7 +1,9 @@
 <template>
   <div v-if="headings.length" class="sticky top-24">
-    <div class="space-y-2">
-      <h4 class="text-sm text-muted-foreground font-semibold">On this page</h4>
+    <div>
+      <h4 class="text-sm text-muted-foreground font-semibold mb-2">
+        On this page
+      </h4>
 
       <nav class="relative">
         <!-- Animated left bar -->

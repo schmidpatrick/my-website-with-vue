@@ -2,7 +2,7 @@
   <div class="w-full">
     <!-- Hero Section -->
     <section
-      class="min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-center mx-auto px-4 sm:px-6 space-y-14"
+      class="min-h-[60vh] md:min-h-[75vh] flex flex-col gap-14 items-center justify-center mx-auto px-4 sm:px-6"
     >
       <h1
         class="text-[clamp(2rem,5vw,4rem)] text-center text-balance font-semibold leading-none my-0"
@@ -70,9 +70,7 @@
         </div>
       </div>
       <div class="flex flex-col items-center">
-        <div
-          class="flex flex-col items-center mt-8 sm:mt-20 text-center space-y-7"
-        >
+        <div class="flex flex-col gap-7 items-center mt-8 sm:mt-20 text-center">
           <h2 class="max-w-md text-balance">{{ projects[0].title }}</h2>
           <p class="max-w-sm text-balance">{{ projects[0].description }}</p>
         </div>
@@ -87,11 +85,9 @@
     </section>
 
     <!-- About Section -->
-    <section
-      class="max-w-[1024px] mx-auto px-4 sm:px-6 py-14 sm:py-40 space-y-10"
-    >
+    <section class="max-w-[1024px] mx-auto px-4 sm:px-6 py-14 sm:py-40">
       <!-- Intro -->
-      <div class="text-center max-w-2xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-10">
         <h2 id="about">
           How I design <span class="text-primary">digital products</span>
         </h2>

@@ -36,8 +36,4 @@
   p {
     @apply text-base text-muted-foreground leading-relaxed;
   }
-
-  section {
-    @apply space-y-6;
-  }
 }
