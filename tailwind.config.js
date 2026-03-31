@@ -13,6 +13,7 @@ export default {
 
         section: {
           DEFAULT: "oklch(var(--section) / <alpha-value>)",
+          foreground: "oklch(var(--section-foreground) / <alpha-value>)",
         },
 
         card: {

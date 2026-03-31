@@ -1,22 +1,42 @@
 <template>
-  <div class="mb-16 sm:mb-24">
-    <div
-      class="flex flex-col gap-1 mb-6 text-sm text-muted-foreground sm:flex-row sm:flex-wrap sm:gap-x-4 sm:gap-y-2"
-    >
-      <span>{{ year }}</span>
-      <span class="hidden sm:inline">•</span>
-      <span>{{ role }}</span>
-      <span class="hidden sm:inline">•</span>
-      <span>{{ timeToRead }} min read</span>
+  <Stack>
+    <!-- Metadata grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-sm">
+      <div>
+        <span class="text-muted-foreground">Focus</span>
+        <p class="font-medium">{{ focus }}</p>
+      </div>
+      <div>
+        <span class="text-muted-foreground">Scope</span>
+        <p class="font-medium">{{ scope }}</p>
+      </div>
+      <div>
+        <span class="text-muted-foreground">Role</span>
+        <p class="font-medium">{{ role }}</p>
+      </div>
+      <div>
+        <span class="text-muted-foreground">Tools</span>
+        <p class="font-medium">{{ tools }}</p>
+      </div>
+      <div>
+        <span class="text-muted-foreground">Year</span>
+        <p class="font-medium">{{ year }}</p>
+      </div>
+      <div>
+        <span class="text-muted-foreground">Read time</span>
+        <p class="font-medium">{{ read }} min</p>
+      </div>
     </div>
+
+    <!-- Title -->
     <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-  </div>
+  </Stack>
 </template>
 
 <script setup lang="ts">
 import { useCurrentProject } from "@/composables/useCurrentProject";
+import Stack from "@/components/Stack.vue";
 
 const project = useCurrentProject();
-const { title, description, year, role, timeToRead } = project.value;
+const { title, year, role, focus, scope, tools, read } = project.value;
 </script>

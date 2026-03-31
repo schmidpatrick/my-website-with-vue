@@ -36,7 +36,7 @@
         <!-- Phone -->
         <RouterLink
           :to="projects[0].path"
-          class="mx-auto max-w-xs sm:col-start-2 drop-shadow-phone"
+          class="mx-auto max-w-xs sm:col-start-2"
         >
           <ImageWithFallback
             :src="routeDetailsWithTicket"

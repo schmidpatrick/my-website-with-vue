@@ -1,9 +1,7 @@
 <template>
   <div v-if="headings.length" class="sticky top-24">
     <div>
-      <h4 class="text-sm text-muted-foreground font-semibold mb-2">
-        On this page
-      </h4>
+      <h4 class="text-sm font-semibold mb-2">On this page</h4>
 
       <nav class="relative">
         <!-- Animated left bar -->
@@ -20,7 +18,7 @@
               class="relative w-full text-left py-2 rounded-md transition-colors duration-200"
               :class="
                 activeId === h.id
-                  ? 'text-foreground font-medium'
+                  ? 'text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
               "
               @click="scrollTo(h.id)"

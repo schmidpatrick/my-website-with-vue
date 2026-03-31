@@ -1,10 +1,10 @@
 <template>
   <div class="w-full">
-    <div class="max-w-[1024px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
       <div class="md:flex md:gap-24">
         <!-- Main Article -->
         <article
-          class="flex flex-col flex-1 gap-16 md:max-w-3xl pb-16 md:pb-28"
+          class="flex flex-col flex-1 gap-16 md:gap-24 md:max-w-3xl pb-16 md:pb-28"
         >
           <slot />
         </article>

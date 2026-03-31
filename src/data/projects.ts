@@ -19,7 +19,7 @@ export const projects: Project[] = [
     description:
       "How clearer journey planning can rebuild confidence in a mobility app",
     role: "Product Designer",
-    focus: "Journey planning UX",
+    focus: "Confident route selection",
     scope: "Concept redesign",
     tools: "Figma, Miro",
     year: "2025",
