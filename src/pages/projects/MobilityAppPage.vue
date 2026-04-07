@@ -1,13 +1,13 @@
 <template>
   <ProjectLayout>
     <ProjectSection>
-      <h1>{{ title }}</h1>
+      <h1>{{ project?.title }}</h1>
 
       <div class="flex gap-2">
         <p
           class="bg-section rounded px-2 py-1 text-xs font-medium text-muted-foreground/80"
         >
-          {{ year }}
+          {{ project?.year }}
         </p>
         <p
           class="bg-section rounded px-2 py-1 text-xs font-medium text-muted-foreground/80"
@@ -17,7 +17,7 @@
         <p
           class="bg-section rounded px-2 py-1 text-xs font-medium text-muted-foreground/80"
         >
-          {{ read }} min read
+          {{ project?.read }} min read
         </p>
       </div>
 
@@ -156,80 +156,99 @@
         confirm, and act. At each step, the interface reduces guesswork and
         makes the next action clear.
       </p>
-    </ProjectSection>
 
-    <ProjectSection>
-      <h3>1. Comparing routes quickly</h3>
-      <div>
-        <p class="text-sm text-muted-foreground">User need</p>
-        <p class="font-medium">Choose a route under time pressure.</p>
-      </div>
-      <p>
-        I placed routes in a single expandable bottom sheet over the map,
-        keeping spatial context visible. The fastest option is prioritized, with
-        visual hierarchy highlighting travel time and transfers.
-      </p>
-      <p>
-        Users can compare options in seconds without switching screens or losing
-        context.
-      </p>
-      <p>
-        This reduces hesitation at a critical decision point, especially under
-        time pressure.
-      </p>
-    </ProjectSection>
+      <div class="w-full max-w-sm mx-auto pt-12">
+        <div class="relative aspect-[9/18.5]">
+          <!-- NEXT (underneath) -->
+          <img
+            :src="steps[current].image"
+            class="absolute inset-0 w-full h-full object-contain z-0"
+          />
 
-    <ProjectSection>
-      <h3>2. Understanding route details</h3>
-      <div>
-        <p class="text-sm text-muted-foreground">User need</p>
-        <p class="font-medium">Confirm the journey before committing.</p>
-      </div>
-      <p>
-        I structured the route details to surface departure time, transfers, and
-        next actions first, while the map reinforces where the journey takes
-        place.
-      </p>
-      <p>This lets users verify that the route works before starting.</p>
-    </ProjectSection>
+          <!-- CURRENT (on top, fading out) -->
+          <img
+            v-if="previous"
+            :src="previous"
+            class="absolute inset-0 w-full h-full object-contain z-10 fade-out"
+            @animationend="previous = null"
+          />
+        </div>
 
-    <ProjectSection>
-      <h3>3. Feeling supported during the journey</h3>
-      <div>
-        <p class="text-sm text-muted-foreground">User need</p>
-        <p class="font-medium">Stay oriented while moving.</p>
-      </div>
-      <p>
-        I introduced a navigation arrow to highlight the current step in the
-        bottom sheet, while a subtle map indicator shows the user’s position in
-        real time.
-      </p>
-      <p>
-        Users can follow the journey without reinterpreting the interface at
-        each step.
-      </p>
-      <p>
-        This reduces cognitive load during movement, when attention is limited.
-      </p>
-    </ProjectSection>
+        <div class="flex justify-center my-6">
+          <div
+            ref="wrapperRef"
+            class="relative bg-muted rounded-full p-1 overflow-hidden"
+          >
+            <!-- PILL -->
+            <div
+              class="absolute top-1 bottom-1 rounded-full bg-foreground pointer-events-none transition-[left,width] duration-[280ms] ease-[cubic-bezier(0,0,0.58,1)]"
+              :style="pillStyle"
+            />
 
-    <ProjectSection>
-      <h3>4. Searching and buying tickets</h3>
-      <div>
-        <p class="text-sm text-muted-foreground">User need</p>
-        <p class="font-medium">Complete the journey without friction.</p>
+            <!-- STEPPER -->
+            <div class="overflow-hidden">
+              <ul
+                ref="containerRef"
+                class="relative flex overflow-x-auto scrollbar-none"
+                :style="maskStyle"
+              >
+                <li
+                  v-for="(step, index) in steps"
+                  :key="step.id"
+                  class="flex-shrink-0"
+                >
+                  <button
+                    :ref="(el) => setStepRef(el, index)"
+                    :class="[
+                      index === current
+                        ? 'text-white transition-colors duration-[140ms] delay-[140ms] ease-[cubic-bezier(0.42,0,1.0,1.0)]'
+                        : 'text-foreground opacity-80 hover:opacity-100 transition-opacity duration-[120ms] ease-[cubic-bezier(0,0,0.58,1)]',
+                    ]"
+                    class="whitespace-nowrap px-4 py-2 text-sm rounded-full"
+                    @click="setCurrent(index)"
+                  >
+                    {{ step.label }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- LEFT ARROW -->
+            <button
+              v-if="hasOverflow && canScrollLeft"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-20 flex h-9 w-10 items-center justify-center bg-transparent transition"
+              @click="prev"
+            >
+              <Icon
+                icon="material-symbols:chevron-left-rounded"
+                width="24"
+                class="text-base text-muted-foreground"
+              />
+            </button>
+            <!-- RIGHT ARROW -->
+            <button
+              v-if="hasOverflow && canScrollRight"
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-20 flex h-9 w-10 items-center justify-center bg-transparent transition"
+              @click="next"
+            >
+              <Icon
+                icon="material-symbols:chevron-right-rounded"
+                width="24"
+                class="text-base text-muted-foreground"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-28">
+          <Transition name="fade" mode="out-in">
+            <p :key="steps[current].id" class="text-center px-5">
+              <InlineHighlight> {{ steps[current].title }}. </InlineHighlight>
+              {{ steps[current].description }}
+            </p>
+          </Transition>
+        </div>
       </div>
-      <div>
-        <p class="text-sm text-muted-foreground">Design principle</p>
-        <p class="font-medium">Keep actions within the journey context.</p>
-      </div>
-      <p>
-        I integrated search and ticket purchase directly into the route flow, so
-        results, pricing, and confirmation don’t break the user’s context.
-      </p>
-      <p>
-        Users can plan, confirm, and start their journey in one continuous flow.
-      </p>
     </ProjectSection>
 
     <ProjectSection>
@@ -331,9 +350,9 @@
 <script setup lang="ts">
 import ProjectLayout from "@/components/project/ProjectLayout.vue";
 import ImageWithFallback from "@/components/ImageWithFallback.vue";
-import searchDestination from "@/assets/images/search-destination.png";
 import routeListFull from "@/assets/images/route-list-full.png";
 import routeDetailsWithTicket from "@/assets/images/route-details-with-ticket.png";
+import routeDetailsWithTicketFull from "@/assets/images/route-details-with-ticket-full.png";
 import routeDetailsTicketBottomSheet from "@/assets/images/route-details-ticket-bottom-sheet.png";
 import onTheWay from "@/assets/images/on-the-way.png";
 import ProjectSection from "@/components/project/ProjectSection.vue";
@@ -341,7 +360,376 @@ import Stack from "@/components/Stack.vue";
 import InlineHighlight from "@/components/InlineHighlight.vue";
 import { useCurrentProject } from "@/composables/useCurrentProject";
 import { Icon } from "@iconify/vue";
+import {
+  ref,
+  onMounted,
+  onBeforeUnmount,
+  nextTick,
+  watch,
+  ComponentPublicInstance,
+  computed,
+} from "vue";
 
 const project = useCurrentProject();
-const { title, year, read } = project.value;
+
+// Mockup stepper
+const current = ref(0);
+const previous = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const wrapperRef = ref<HTMLElement | null>(null);
+const hasOverflow = ref(false);
+const canScrollLeft = ref(false);
+const canScrollRight = ref(false);
+const stepRefs = ref<(HTMLElement | null)[]>([]);
+const pillStyle = ref({
+  width: "0px",
+  left: "0px",
+});
+
+let resizeObserver: ResizeObserver | null = null;
+
+const steps = [
+  {
+    id: 1,
+    label: "Overview",
+    title: "Understand your journey at a glance",
+    description:
+      "The map and route details work together to show where you are, where you’re going, and how everything connects.",
+    image: routeDetailsWithTicket,
+  },
+  {
+    id: 2,
+    label: "Journey",
+    title: "Know exactly when and how you travel",
+    description:
+      "Clear departure times and structured transfers make each step of the journey easy to follow.",
+    image: routeDetailsWithTicketFull,
+  },
+  {
+    id: 3,
+    label: "Navigation",
+    title: "Stay oriented at every step",
+    description:
+      "Live guidance on the map and in the details keeps you on track throughout the journey.",
+    image: onTheWay,
+  },
+  {
+    id: 4,
+    label: "Compare",
+    title: "Choose with confidence",
+    description:
+      "Compare routes by duration and complexity to quickly find the option that fits your needs.",
+    image: routeListFull,
+  },
+  {
+    id: 5,
+    label: "Ticket",
+    title: "Get clear confirmation and peace of mind",
+    description:
+      "Your ticket and journey details are easy to access, so you always know you’re covered.",
+    image: routeDetailsTicketBottomSheet,
+  },
+];
+
+function checkOverflow() {
+  const el = containerRef.value;
+  if (!el) return;
+
+  hasOverflow.value = el.scrollWidth > el.clientWidth;
+
+  updateScrollState();
+}
+
+function updateScrollState() {
+  const el = containerRef.value;
+  if (!el) return;
+
+  canScrollLeft.value = el.scrollLeft > 0;
+  canScrollRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 1;
+}
+
+function getTargetMetrics(index: number) {
+  const wrapper = wrapperRef.value;
+  const container = containerRef.value;
+  const el = stepRefs.value[index];
+
+  if (!wrapper || !container || !el) return null;
+
+  const wrapperRect = wrapper.getBoundingClientRect();
+  const containerRect = container.getBoundingClientRect();
+
+  // ideal center
+  const idealScrollLeft =
+    el.offsetLeft - container.clientWidth / 2 + el.offsetWidth / 2;
+
+  // clamp to bounds
+  const maxScroll = container.scrollWidth - container.clientWidth;
+  const targetScrollLeft = Math.max(0, Math.min(idealScrollLeft, maxScroll));
+
+  // scroll delta
+  const scrollDelta = targetScrollLeft - container.scrollLeft;
+
+  // pill position
+  const pillLeft =
+    el.offsetLeft - targetScrollLeft + (containerRect.left - wrapperRect.left);
+
+  return {
+    targetScrollLeft,
+    scrollDelta,
+    pillLeft,
+    width: el.offsetWidth,
+  };
+}
+
+function setPill(width: number, left: number) {
+  pillStyle.value = {
+    width: `${width}px`,
+    left: `${left}px`,
+  };
+}
+
+function setCurrent(index: number) {
+  if (index === current.value) return;
+
+  const clamped = Math.max(0, Math.min(index, steps.length - 1));
+  const metrics = getTargetMetrics(clamped);
+  const el = containerRef.value;
+
+  if (!metrics || !el) return;
+
+  previous.value = steps[current.value].image;
+  current.value = clamped;
+
+  requestAnimationFrame(() => {
+    setPill(metrics.width, metrics.pillLeft);
+    animateScroll(el, metrics.scrollDelta, 320);
+  });
+}
+
+function next() {
+  setCurrent(current.value + 1);
+}
+
+function prev() {
+  setCurrent(current.value - 1);
+}
+
+function preventWheel(e: WheelEvent) {
+  e.preventDefault();
+}
+
+function preventTouchMove(e: TouchEvent) {
+  e.preventDefault();
+}
+
+function setStepRef(
+  el: Element | ComponentPublicInstance | null,
+  index: number,
+) {
+  if (el instanceof HTMLElement) {
+    stepRefs.value[index] = el;
+  } else {
+    stepRefs.value[index] = null;
+  }
+}
+
+function syncToCurrent() {
+  const metrics = getTargetMetrics(current.value);
+  const el = containerRef.value;
+  if (!metrics || !el) return;
+
+  setPill(metrics.width, metrics.pillLeft);
+
+  // also fix scroll position
+  el.scrollLeft = metrics.targetScrollLeft;
+}
+
+function animateScroll(el: HTMLElement, delta: number, duration: number) {
+  const start = el.scrollLeft;
+  const target = start + delta;
+  const startTime = performance.now();
+
+  const easeOut = (t: number) => 1 - Math.pow(1 - t, 2.2); // cubic ease-out
+
+  // animation loop
+  function frame(now: number) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    const eased = easeOut(progress);
+
+    el.scrollLeft = start + (target - start) * eased;
+
+    if (progress >= 1) {
+      el.scrollLeft = target;
+      return; // stop animation
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+}
+
+function handleScroll() {
+  updateScrollState();
+}
+
+const maskStyle = computed(() => {
+  const left = hasOverflow.value && canScrollLeft.value;
+  const right = hasOverflow.value && canScrollRight.value;
+
+  const ARROW = 40;
+  const PADDING = 4;
+  const OFFSET = ARROW - PADDING;
+  const FADE = 24;
+
+  if (left && right) {
+    return {
+      WebkitMaskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+      maskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+    };
+  }
+
+  // left only
+  if (left) {
+    return {
+      WebkitMaskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black 100%
+      )`,
+      maskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black 100%
+      )`,
+    };
+  }
+
+  // right only
+  if (right) {
+    return {
+      WebkitMaskImage: `linear-gradient(
+        to right,
+        black 0,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+      maskImage: `linear-gradient(
+        to right,
+        black 0,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+    };
+  }
+
+  return {};
+});
+
+watch(current, async () => {
+  await nextTick();
+  checkOverflow();
+});
+
+onMounted(async () => {
+  await nextTick();
+
+  const el = containerRef.value;
+  const metrics = getTargetMetrics(current.value);
+  if (!el || !metrics) return;
+
+  el.addEventListener("wheel", preventWheel, { passive: false });
+  el.addEventListener("touchmove", preventTouchMove, { passive: false });
+
+  // init
+  checkOverflow();
+  setPill(metrics.width, metrics.pillLeft);
+
+  // listen to scroll
+  el.addEventListener("scroll", handleScroll);
+
+  // observe size changes
+  let frame: number | null = null;
+  resizeObserver = new ResizeObserver(() => {
+    if (frame) cancelAnimationFrame(frame);
+
+    frame = requestAnimationFrame(() => {
+      checkOverflow();
+      syncToCurrent();
+    });
+  });
+
+  resizeObserver.observe(el);
+});
+
+onBeforeUnmount(() => {
+  const el = containerRef.value;
+
+  if (el) {
+    el.removeEventListener("scroll", handleScroll);
+    el.removeEventListener("wheel", preventWheel);
+    el.removeEventListener("touchmove", preventTouchMove);
+  }
+
+  if (resizeObserver) {
+    resizeObserver.disconnect();
+    resizeObserver = null;
+  }
+});
 </script>
+
+<style>
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Text animation */
+.fade-enter-active {
+  transition: opacity 200ms ease;
+  transition-delay: 140ms;
+}
+
+.fade-leave-active {
+  transition: opacity 120ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Mockup animation */
+.fade-out {
+  animation: fadeOut 400ms cubic-bezier(0.3, 0, 0.2, 1);
+  animation-delay: 80ms;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+</style>
