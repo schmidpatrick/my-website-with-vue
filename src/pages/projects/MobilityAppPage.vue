@@ -222,7 +222,7 @@
               <Icon
                 icon="material-symbols:chevron-left-rounded"
                 width="24"
-                class="text-base text-muted-foreground"
+                class="text-muted-foreground"
               />
             </button>
             <!-- RIGHT ARROW -->
@@ -234,7 +234,7 @@
               <Icon
                 icon="material-symbols:chevron-right-rounded"
                 width="24"
-                class="text-base text-muted-foreground"
+                class="text-muted-foreground"
               />
             </button>
           </div>
@@ -261,9 +261,6 @@
         Using Material Design components let me focus on validating flow and
         interaction, while relying on familiar patterns users already
         understand.
-      </p>
-      <p>
-        <a href="https://www.figma.com/proto/..."> Try the prototype </a>
       </p>
     </ProjectSection>
 
@@ -294,7 +291,7 @@
         As a result, users moved from comparing options to committing to a route
         more quickly, with fewer moments of uncertainty.
       </p>
-      <p class="border-l-4 border-primary pl-4 font-medium">
+      <p class="border-l-4 border-primary pl-4 text-foreground font-medium">
         Even without changes to the underlying data, clearer decisions and
         predictable interactions made the system feel more trustworthy.
       </p>
@@ -343,6 +340,30 @@
           <p>Test the approach across more complex, multi-step journeys.</p>
         </li>
       </Stack>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="prototype">See how trust holds up in the full journey</h2>
+      <a
+        href="https://www.figma.com/proto/xvhkr0dvPQf5HpMKwczw9C/Public-Transport-App--Prototype-?node-id=551-8485&p=f&viewport=333%2C498%2C0.06&t=x6vMR0EqVHYonJtS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=551%3A8485&show-proto-sidebar=0&page-id=225%3A2"
+        target="_blank"
+        class="p-6 bg-section text-muted-foreground rounded-3xl will-change-transform transition-transform duration-300 ease-[cubic-bezier(0,0,0.5,1)] scale-100 hover:scale-[1.0174418604651163]"
+      >
+        <p>
+          Explore the
+          <InlineHighlight>
+            complete flow from planning to arrival</InlineHighlight
+          >, including interactions and transitions not visible in the case
+          study.
+        </p>
+        <p
+          class="inline-flex items-center gap-1 text-primary hover:underline mt-4"
+        >
+          Start prototype
+          <Icon icon="material-symbols:arrow-outward-rounded" width="20" />
+        </p>
+        <p class="text-xs mt-1">Opens instantly, no login required.</p>
+      </a>
     </ProjectSection>
   </ProjectLayout>
 </template>
