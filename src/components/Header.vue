@@ -13,7 +13,10 @@
           </RouterLink>
 
           <!-- Desktop Navigation Links - Only on homepage -->
-          <div v-if="isHomePage" class="hidden md:flex h-full gap-8 text-xs">
+          <div
+            v-if="isHomePage"
+            class="hidden md:flex h-full gap-8 text-sm font-medium"
+          >
             <button
               class="text-foreground hover:opacity-60 transition-opacity flex items-center"
               @click="scrollToSection('featured-project')"
