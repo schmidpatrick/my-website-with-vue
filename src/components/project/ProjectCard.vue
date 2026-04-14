@@ -12,9 +12,7 @@
       </div>
 
       <!-- Content -->
-      <div
-        class="flex-1 flex flex-col justify-center space-y-0.5 sm:p-6 sm:space-y-2"
-      >
+      <div class="flex-1 flex flex-col gap-1 sm:gap-2 justify-center sm:p-6">
         <h3 class="line-clamp-1">
           {{ project.title }}
         </h3>

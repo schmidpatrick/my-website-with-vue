@@ -14,11 +14,11 @@
   h2,
   h3,
   h4 {
-    @apply scroll-mt-24 font-medium text-foreground;
+    @apply scroll-mt-24 font-semibold text-foreground;
   }
 
   h1 {
-    @apply text-3xl sm:text-4xl leading-tight tracking-tight mb-8;
+    @apply text-3xl sm:text-4xl leading-tight tracking-tight;
   }
 
   h2 {
@@ -37,7 +37,7 @@
     @apply text-base text-muted-foreground leading-relaxed;
   }
 
-  section {
-    @apply space-y-6;
+  strong {
+    @apply font-semibold;
   }
 }

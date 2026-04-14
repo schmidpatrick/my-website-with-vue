@@ -1,327 +1,756 @@
 <template>
   <ProjectLayout>
-    <ProjectHeader />
-    <!-- Overview -->
-    <section>
-      <h2 id="overview">Overview</h2>
-      <p>
-        The KVB app helps people navigate public transport in Cologne — yet over
-        time, it has lost the trust of its users. Reviews mention unreliable
-        data, confusing navigation, and an outdated interface.
-      </p>
-      <p>
-        As a frequent commuter, I felt that frustration myself. That's why I
-        decided to explore how design could rebuild
-        <strong>trust and confidence</strong> in such an essential everyday
-        tool.
-      </p>
-    </section>
+    <ProjectSection>
+      <h1>{{ project?.title }}</h1>
 
-    <!-- The Problem -->
-    <section>
-      <h2 id="problem">The Problem</h2>
+      <div class="flex gap-2">
+        <p
+          class="bg-section rounded px-2 py-1 text-xs font-medium text-muted-foreground/80"
+        >
+          {{ project?.year }}
+        </p>
+        <p
+          class="bg-section rounded px-2 py-1 text-xs font-medium text-muted-foreground/80"
+        >
+          Case Study
+        </p>
+        <!-- <p
+          class="bg-section rounded px-2 py-1 text-xs font-medium text-muted-foreground/80"
+        >
+          {{ project?.read }} min read
+        </p> -->
+      </div>
+
       <p>
-        While the app's technical reliability (like real-time data) depends on
-        the backend, the
-        <strong>visual design and interaction patterns</strong> play a crucial
-        role in how trustworthy the app feels. If users struggle to understand
-        what's happening, even accurate data can feel unreliable.
+        Cologne’s public transport app is essential for navigating the city, but
+        unreliable data and unclear journeys have
+        <InlineHighlight>eroded trust</InlineHighlight> — pushing many users to
+        switch to Google&nbsp;Maps or avoid the app entirely.
       </p>
-      <ProjectCallout
-        variant="quote"
-        author="User review from the Google Play Store"
+      <p>
+        While transport data reliability depends largely on backend systems, I
+        focused on restoring confidence through clearer, more trustworthy
+        journey planning.
+      </p>
+      <p>
+        <InlineHighlight tight>Goal.</InlineHighlight>
+        Enable users to choose and follow a route with confidence.
+      </p>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="problem">Why users lost trust</h2>
+      <p>
+        <InlineHighlight tight>Objective.</InlineHighlight>
+        Understand what breaks confidence — and what restores it.
+      </p>
+      <p>
+        I reviewed user feedback, analyzed competitor apps, and spoke with
+        commuters to understand where trust breaks down.
+      </p>
+      <p>
+        <InlineHighlight tight>Findings.</InlineHighlight>
+        Unreliable data, unclear route structure, and missing context made
+        journeys hard to evaluate — pushing many users to switch to
+        Google&nbsp;Maps or abandon the app entirely.
+      </p>
+      <p class="border-l-4 border-primary pl-4 text-foreground font-medium">
+        This showed that the core issue wasn’t data accuracy — users lacked the
+        confidence to decide, even when the data was correct.
+      </p>
+      <p>
+        Instead of only fixing issues, I focused on why tools like
+        Google&nbsp;Maps feel reliable and used those patterns to guide the
+        redesign.
+      </p>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="trusted-alternatives">Lessons from trusted alternatives</h2>
+      <p>Patterns that build trust.</p>
+      <Stack
+        as="ol"
+        gap="xs"
+        class="list-decimal list-outside pl-5 marker:font-medium"
       >
-        I never know if I can rely on it — I always double-check with Google
-        Maps.
-      </ProjectCallout>
-      <p>The app didn't just look outdated — it made people feel uncertain.</p>
-    </section>
-
-    <!-- Research -->
-    <section>
-      <h2 id="research">Research</h2>
-      <p>To understand where that uncertainty came from, I conducted:</p>
-      <ProjectBulletList>
-        <ProjectBulletListItem>
-          <strong>3 user interviews</strong> with regular commuters
-        </ProjectBulletListItem>
-        <ProjectBulletListItem>
-          <strong>A short online survey</strong> about travel habits
-        </ProjectBulletListItem>
-        <ProjectBulletListItem>
-          <strong>Analysis of Google Play Store reviews</strong> for authentic
-          feedback from real users
-        </ProjectBulletListItem>
-      </ProjectBulletList>
-      <p>Key insights:</p>
-      <ProjectBulletList>
-        <ProjectBulletListItem>
-          Users frequently <strong>switch between multiple apps</strong> for
-          route planning, ticketing, and delay updates.
-        </ProjectBulletListItem>
-        <ProjectBulletListItem>
-          Trust issues arise not only from technical errors but from
-          <strong>poor communication and feedback</strong> in the interface.
-        </ProjectBulletListItem>
-        <ProjectBulletListItem>
-          The visual design feels <strong>dense and outdated</strong>,
-          increasing cognitive load in time-sensitive situations.
-        </ProjectBulletListItem>
-      </ProjectBulletList>
+        <li>
+          <p>
+            <InlineHighlight tight>Easy comparison of routes</InlineHighlight>
+            allows users to decide without digging into details.
+          </p>
+        </li>
+        <li>
+          <p>
+            <InlineHighlight tight>Clear structure</InlineHighlight>
+            makes departure, transfers, and next steps immediately obvious.
+          </p>
+        </li>
+        <li>
+          <p>
+            <InlineHighlight tight>Continuous guidance</InlineHighlight>
+            ensures users always know where they are and what comes next.
+          </p>
+        </li>
+      </Stack>
       <p>
-        These findings revealed that rebuilding trust wasn’t a technical
-        challenge — it was a communication and clarity problem.
+        I used these patterns to define the design direction: prioritize
+        decision-making over completeness and reduce the need to interpret raw
+        data.
       </p>
-    </section>
+    </ProjectSection>
 
-    <!-- Design Challenge -->
-    <section>
-      <h2 id="design-challenge">Design Challenge</h2>
-      <p>These insights reframed the problem into a clear design challenge:</p>
-      <ProjectCallout variant="highlight">
-        How might I restore trust at critical journey moments through clearer
-        communication and reduced cognitive load?
-      </ProjectCallout>
-    </section>
+    <ProjectSection>
+      <h2 id="scenario">Moments where trust matters most</h2>
+      <p>
+        <InlineHighlight tight>Scenario.</InlineHighlight>
+        A time-sensitive everyday journey to a dentist appointment.
+      </p>
+      <p>
+        Rather than redesigning the entire app, I focused on
+        <InlineHighlight>
+          moments where users need to make decisions quickly and without
+          doubt</InlineHighlight
+        >.
+      </p>
+    </ProjectSection>
 
-    <!-- Framing -->
-    <section>
-      <h2 id="framing">User Scenario</h2>
+    <ProjectSection>
+      <h2 id="design-principles">Design principles for rebuilding trust</h2>
+      <Stack
+        as="ol"
+        gap="xs"
+        class="list-decimal list-outside pl-5 marker:font-medium"
+      >
+        <li>
+          <p>
+            <InlineHighlight tight>
+              Make route options comparable at a glance.
+            </InlineHighlight>
+          </p>
+        </li>
+        <li>
+          <p>
+            <InlineHighlight tight>
+              Surface key trip decisions before secondary details.
+            </InlineHighlight>
+          </p>
+        </li>
+        <li>
+          <p>
+            <InlineHighlight tight>
+              Keep users oriented from planning to arrival.
+            </InlineHighlight>
+          </p>
+        </li>
+      </Stack>
       <p>
-        For the bootcamp pitch, I structured the redesign around a simple,
-        relatable story:
+        To keep decisions fast and clear, I intentionally deprioritized less
+        critical details and surfaced them only when needed.
       </p>
-      <ProjectCallout variant="highlight">
-        Getting to a dentist appointment on time.
-      </ProjectCallout>
-      <p>
-        It’s an everyday journey — familiar, time-bound, and subtly stressful.
-        This narrative helped ground the user flow and communicate design
-        decisions clearly to both designers and non-designers.
-      </p>
-    </section>
+    </ProjectSection>
 
-    <!-- Design Strategy -->
-    <section>
-      <h2 id="design-strategy">Design Strategy</h2>
+    <ProjectSection>
+      <h2 id="design-process">Designing a journey users can trust</h2>
       <p>
-        Rather than redesigning the entire app, I focused on the moments where
-        trust is most fragile.
+        I designed the journey around key moments where users need to choose,
+        confirm, and act. At each step, the interface reduces guesswork and
+        makes the next action clear.
       </p>
-      <ProjectBulletList>
-        <ProjectBulletListItem>
-          <strong>Looking up routes:</strong> A clearer hierarchy helps users
-          compare options quickly and decide with confidence.
-        </ProjectBulletListItem>
-        <ProjectBulletListItem>
-          <strong>Buying a ticket:</strong> Streamlined steps and transparent
-          system feedback reduce hesitation at the point of commitment.
-        </ProjectBulletListItem>
-        <ProjectBulletListItem>
-          <strong>Assistance while on the way:</strong> Contextual guidance and
-          timely updates reinforce reliability when plans change.
-        </ProjectBulletListItem>
-      </ProjectBulletList>
-    </section>
 
-    <!-- Interaction & Interface Design -->
-    <section>
-      <h2 id="interaction-interface-design">Interaction & Interface Design</h2>
-      <p>
-        The redesign focused on
-        <strong>clarity, hierarchy, and a calmer tone</strong>, using deliberate
-        interface states and feedback to ensure each step of the journey
-        communicates what happens next — without hesitation.
-      </p>
-      <section>
-        <h3 class="pt-4">Immediate Feedback During Search</h3>
-        <p>
-          In time-sensitive situations, even small delays create uncertainty. As
-          soon as users begin typing, contextual suggestions appear — helping
-          them find their destination quickly and without second-guessing.
-        </p>
-        <p>
-          Frequently used destinations remain accessible through recent searches
-          and favorites, supporting habitual travel patterns.
-        </p>
-        <figure class="space-y-4">
+      <div class="w-full max-w-sm mx-auto pt-12">
+        <div class="relative aspect-[9/18.5]">
+          <!-- NEXT (underneath) -->
+          <img
+            :src="steps[current].image"
+            class="absolute inset-0 w-full h-full object-contain z-0"
+          />
+
+          <!-- CURRENT (on top, fading out) -->
+          <img
+            v-if="previous"
+            :src="previous"
+            class="absolute inset-0 w-full h-full object-contain z-10 fade-out"
+            @animationend="previous = null"
+          />
+        </div>
+
+        <div class="flex justify-center my-6">
           <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start pt-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
+            ref="wrapperRef"
+            class="relative bg-muted rounded-full p-1 overflow-hidden"
           >
-            <ImageWithFallback
-              :src="searchDestination"
-              alt="alt"
-              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
+            <!-- PILL -->
+            <div
+              class="absolute top-1 bottom-1 rounded-full bg-foreground pointer-events-none transition-[left,width] duration-[280ms] ease-[cubic-bezier(0,0,0.58,1)]"
+              :style="pillStyle"
             />
-          </div>
-        </figure>
-        <p>
-          The result is a search experience that feels immediate and
-          predictable.
-        </p>
-      </section>
-      <section>
-        <h3 class="pt-4">Route Comparison & Dynamic States</h3>
-        <p>
-          Route comparison centers on what matters most:
-          <strong>duration and transfers</strong>. The fastest connection
-          appears first, while visual hierarchy emphasizes total travel time and
-          required changes.
-        </p>
-        <p>
-          Routes and filters are accessed through a single expandable bottom
-          sheet layered over the map. The sheet can be expanded for deeper
-          comparison or collapsed to maintain spatial context — keeping
-          orientation intact while exploring alternatives.
-        </p>
-        <figure class="space-y-4">
-          <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pb-36 my-10 overflow-hidden rounded-3xl bg-accent/40"
-          >
-            <ImageWithFallback
-              :src="routeListFull"
-              alt="alt"
-              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
-            />
-          </div>
-        </figure>
-        <p>
-          Users can scan, compare, and decide without losing their sense of
-          place.
-        </p>
-      </section>
-      <section>
-        <h3 class="pt-4">Route Details & Contextual Hierarchy</h3>
-        <p>
-          The route details screen brings structure to the full journey.
-          Departure time, transfers, and the next required action are clearly
-          prioritized, while the map provides spatial reassurance.
-        </p>
-        <p>
-          Information is grouped to reduce cognitive load and highlight what
-          needs attention now — not everything at once.
-        </p>
-        <figure class="space-y-4">
-          <div
-            class="flex justify-center items-start py-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
-          >
-            <ImageWithFallback
-              :src="routeDetailsWithTicket"
-              alt="alt"
-              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
-            />
-          </div>
-        </figure>
-        <p>Clarity here turns planning into confident action.</p>
-      </section>
-      <section>
-        <h3 class="pt-4">Seamless Ticket Interaction</h3>
-        <p>
-          Ticket purchase happens directly within the route details view. The
-          ticket matching the selected route is preselected, allowing users to
-          complete the purchase with a single tap.
-        </p>
-        <p>
-          During processing, a subtle loading state appears in place — keeping
-          context intact. Once successful, the purchased ticket is displayed
-          inside the same bottom sheet and can be collapsed to refocus on the
-          journey.
-        </p>
-        <figure class="space-y-4">
-          <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-start py-12 my-10 overflow-hidden rounded-3xl bg-accent/40"
-          >
-            <ImageWithFallback
-              :src="routeDetailsTicketBottomSheet"
-              alt="alt"
-              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
-            />
-          </div>
-        </figure>
-        <p>
-          The transition from planning to purchase feels seamless and
-          uninterrupted.
-        </p>
-      </section>
-      <section>
-        <h3 class="pt-4">Dynamic Guidance & Location Feedback</h3>
-        <p>
-          During the journey, the current step is highlighted within the bottom
-          sheet. As progress continues, the interface automatically scrolls to
-          the relevant instruction, keeping users oriented without manual
-          adjustment.
-        </p>
-        <p>
-          A corresponding arrow on the map subtly pulsates to indicate the
-          current location and reinforce spatial awareness.
-        </p>
-        <figure class="space-y-4">
-          <div
-            class="aspect-[1/1] sm:aspect-[5/3] flex justify-center items-center pt-14 my-10 overflow-hidden rounded-3xl bg-accent/40"
-          >
-            <ImageWithFallback
-              :src="onTheWay"
-              alt="alt"
-              class="w-4/5 sm:w-1/2 object-cover drop-shadow-phone"
-            />
-          </div>
-        </figure>
-        <p>Guidance stays visible. The journey stays predictable.</p>
-      </section>
-    </section>
 
-    <!-- Outcome -->
-    <section>
-      <h2 id="outcome">Outcome</h2>
-      <p>
-        Testing with peers and presenting during the bootcamp pitch confirmed
-        that the new design
-        <strong>improves perceived reliability.</strong> Users described it as
-        "cleaner", "more intuitive", and even "something I'd actually trust to
-        get me there on time."
-      </p>
-      <p>
-        While backend improvements remain crucial, this redesign demonstrates
-        how <strong>frontend design can actively support trust</strong> through
-        visual clarity and predictable interaction patterns.
-      </p>
-    </section>
+            <!-- STEPPER -->
+            <div class="overflow-hidden">
+              <ul
+                ref="containerRef"
+                class="relative flex overflow-x-auto scrollbar-none"
+                :style="maskStyle"
+              >
+                <li
+                  v-for="(step, index) in steps"
+                  :key="step.id"
+                  class="flex-shrink-0"
+                >
+                  <button
+                    :ref="(el) => setStepRef(el, index)"
+                    :class="[
+                      index === current
+                        ? 'text-white transition-colors duration-[140ms] delay-[140ms] ease-[cubic-bezier(0.42,0,1.0,1.0)]'
+                        : 'text-foreground opacity-80 hover:opacity-100 transition-opacity duration-[120ms] ease-[cubic-bezier(0,0,0.58,1)]',
+                    ]"
+                    class="whitespace-nowrap px-4 py-2 text-sm rounded-full"
+                    @click="setCurrent(index)"
+                  >
+                    {{ step.label }}
+                  </button>
+                </li>
+              </ul>
+            </div>
 
-    <!-- Reflection -->
-    <section>
-      <h2 id="design-perspective">Design Perspective</h2>
+            <!-- LEFT ARROW -->
+            <button
+              v-if="hasOverflow && canScrollLeft"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-20 flex h-9 w-10 items-center justify-center bg-transparent transition"
+              @click="prev"
+            >
+              <Icon
+                icon="material-symbols:chevron-left-rounded"
+                width="24"
+                class="text-muted-foreground"
+              />
+            </button>
+            <!-- RIGHT ARROW -->
+            <button
+              v-if="hasOverflow && canScrollRight"
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-20 flex h-9 w-10 items-center justify-center bg-transparent transition"
+              @click="next"
+            >
+              <Icon
+                icon="material-symbols:chevron-right-rounded"
+                width="24"
+                class="text-muted-foreground"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-28">
+          <Transition name="fade" mode="out-in">
+            <p :key="steps[current].id" class="text-center px-5">
+              <InlineHighlight> {{ steps[current].title }}. </InlineHighlight>
+              {{ steps[current].description }}
+            </p>
+          </Transition>
+        </div>
+      </div>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="testing">Validating the design direction</h2>
       <p>
-        This project changed how I think about design for public services. Trust
-        isn't just built with data — it's built through
-        <strong>transparency, clarity, and tone</strong>.
+        I built a functional prototype and tested it with commuters using the
+        dentist appointment scenario.
       </p>
       <p>
-        By translating technical complexity into a calm, confident interface, I
-        learned how design can make technology feel human again.
+        Using Material Design components let me focus on validating flow and
+        interaction, while relying on familiar patterns users already
+        understand.
       </p>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="key-observations">Key observations</h2>
+      <Stack as="ul" gap="xs" class="list-disc list-outside pl-5">
+        <li>
+          <p>
+            Participants compared route options quickly without needing
+            guidance, indicating that the hierarchy reduced cognitive effort at
+            the decision point.
+          </p>
+        </li>
+        <li>
+          <p>
+            Route details made transfers and timing easy to verify, helping
+            users commit to a route with more confidence.
+          </p>
+        </li>
+        <li>
+          <p>
+            Familiar patterns reduced hesitation, especially under time
+            pressure, and made the flow immediately understandable.
+          </p>
+        </li>
+      </Stack>
       <p>
-        Most importantly, this project reminded me that
-        <strong>design stories are about people</strong> — not features. Whether
-        it's a commute or a dentist appointment, every journey deserves to feel
-        reliable.
+        As a result, users moved from comparing options to committing to a route
+        more quickly, with fewer moments of uncertainty.
       </p>
-      <p>
-        That belief continues to guide how I approach complex systems today.
+      <p class="border-l-4 border-primary pl-4 text-foreground font-medium">
+        Even without changes to the underlying data, clearer decisions and
+        predictable interactions made the system feel more trustworthy.
       </p>
-    </section>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="takeaways">Takeaways</h2>
+      <Stack as="ul" gap="xs" class="list-disc list-outside pl-5">
+        <li>
+          <p>
+            Trust isn’t driven by data alone — it depends on how easily users
+            can make decisions with that data.
+          </p>
+        </li>
+        <li>
+          <p>
+            Prioritizing clarity over completeness reduces hesitation at
+            critical moments.
+          </p>
+        </li>
+        <li>
+          <p>
+            Small improvements at decision points can change how reliable a
+            system feels.
+          </p>
+        </li>
+      </Stack>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="next-steps">Next steps</h2>
+      <Stack as="ul" gap="xs" class="list-disc list-outside pl-5">
+        <li>
+          <p>
+            Validate the design with real-time data to understand how delays and
+            uncertainty affect user decisions.
+          </p>
+        </li>
+        <li>
+          <p>
+            Explore how proactive updates (e.g. delay alerts) can support users
+            during disruptions.
+          </p>
+        </li>
+        <li>
+          <p>Test the approach across more complex, multi-step journeys.</p>
+        </li>
+      </Stack>
+    </ProjectSection>
+
+    <ProjectSection>
+      <h2 id="prototype">See how trust holds up in the full journey</h2>
+      <a
+        href="https://www.figma.com/proto/xvhkr0dvPQf5HpMKwczw9C/Public-Transport-App--Prototype-?node-id=551-8485&p=f&viewport=333%2C498%2C0.06&t=x6vMR0EqVHYonJtS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=551%3A8485&show-proto-sidebar=0&page-id=225%3A2"
+        target="_blank"
+        class="p-6 bg-section text-muted-foreground rounded-3xl will-change-transform transition-transform duration-300 ease-[cubic-bezier(0,0,0.5,1)] scale-100 hover:scale-[1.0174418604651163]"
+      >
+        <p>
+          Explore the
+          <InlineHighlight>
+            complete flow from planning to arrival</InlineHighlight
+          >, including interactions and transitions not visible in the case
+          study.
+        </p>
+        <p
+          class="inline-flex items-center gap-1 text-primary hover:underline mt-4"
+        >
+          Start prototype
+          <Icon icon="material-symbols:arrow-outward-rounded" width="20" />
+        </p>
+        <p class="text-xs mt-1">Opens instantly, no login required.</p>
+      </a>
+    </ProjectSection>
   </ProjectLayout>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import ProjectLayout from "@/components/project/ProjectLayout.vue";
-import ProjectHeader from "@/components/project/ProjectHeader.vue";
-import ProjectBulletList from "@/components/project/ProjectBulletList.vue";
 import ImageWithFallback from "@/components/ImageWithFallback.vue";
-import ProjectCallout from "@/components/project/ProjectCallout.vue";
-import ProjectBulletListItem from "@/components/project/ProjectBulletListItem.vue";
-import searchDestination from "@/assets/images/search-destination.png";
 import routeListFull from "@/assets/images/route-list-full.png";
 import routeDetailsWithTicket from "@/assets/images/route-details-with-ticket.png";
+import routeDetailsWithTicketFull from "@/assets/images/route-details-with-ticket-full.png";
 import routeDetailsTicketBottomSheet from "@/assets/images/route-details-ticket-bottom-sheet.png";
 import onTheWay from "@/assets/images/on-the-way.png";
+import ProjectSection from "@/components/project/ProjectSection.vue";
+import Stack from "@/components/Stack.vue";
+import InlineHighlight from "@/components/InlineHighlight.vue";
+import { useCurrentProject } from "@/composables/useCurrentProject";
+import { Icon } from "@iconify/vue";
+import {
+  ref,
+  onMounted,
+  onBeforeUnmount,
+  nextTick,
+  watch,
+  ComponentPublicInstance,
+  computed,
+} from "vue";
+
+const project = useCurrentProject();
+
+// Mockup stepper
+const current = ref(0);
+const previous = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const wrapperRef = ref<HTMLElement | null>(null);
+const hasOverflow = ref(false);
+const canScrollLeft = ref(false);
+const canScrollRight = ref(false);
+const stepRefs = ref<(HTMLElement | null)[]>([]);
+const pillStyle = ref({
+  width: "0px",
+  left: "0px",
+});
+
+let resizeObserver: ResizeObserver | null = null;
+
+const steps = [
+  {
+    id: 1,
+    label: "Overview",
+    title: "Understand your journey at a glance",
+    description:
+      "The map and route details work together to show where you are, where you’re going, and how everything connects.",
+    image: routeDetailsWithTicket,
+  },
+  {
+    id: 2,
+    label: "Journey",
+    title: "Know exactly when and how you travel",
+    description:
+      "Clear departure times and structured transfers make each step of the journey easy to follow.",
+    image: routeDetailsWithTicketFull,
+  },
+  {
+    id: 3,
+    label: "Navigation",
+    title: "Stay oriented at every step",
+    description:
+      "Live guidance on the map and in the details keeps you on track throughout the journey.",
+    image: onTheWay,
+  },
+  {
+    id: 4,
+    label: "Compare",
+    title: "Choose with confidence",
+    description:
+      "Compare routes by duration and complexity to quickly find the option that fits your needs.",
+    image: routeListFull,
+  },
+  {
+    id: 5,
+    label: "Ticket",
+    title: "Get clear confirmation and peace of mind",
+    description:
+      "Your ticket and journey details are easy to access, so you always know you’re covered.",
+    image: routeDetailsTicketBottomSheet,
+  },
+];
+
+function checkOverflow() {
+  const el = containerRef.value;
+  if (!el) return;
+
+  hasOverflow.value = el.scrollWidth > el.clientWidth;
+
+  updateScrollState();
+}
+
+function updateScrollState() {
+  const el = containerRef.value;
+  if (!el) return;
+
+  canScrollLeft.value = el.scrollLeft > 0;
+  canScrollRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 1;
+}
+
+function getTargetMetrics(index: number) {
+  const wrapper = wrapperRef.value;
+  const container = containerRef.value;
+  const el = stepRefs.value[index];
+
+  if (!wrapper || !container || !el) return null;
+
+  const wrapperRect = wrapper.getBoundingClientRect();
+  const containerRect = container.getBoundingClientRect();
+
+  // ideal center
+  const idealScrollLeft =
+    el.offsetLeft - container.clientWidth / 2 + el.offsetWidth / 2;
+
+  // clamp to bounds
+  const maxScroll = container.scrollWidth - container.clientWidth;
+  const targetScrollLeft = Math.max(0, Math.min(idealScrollLeft, maxScroll));
+
+  // scroll delta
+  const scrollDelta = targetScrollLeft - container.scrollLeft;
+
+  // pill position
+  const pillLeft =
+    el.offsetLeft - targetScrollLeft + (containerRect.left - wrapperRect.left);
+
+  return {
+    targetScrollLeft,
+    scrollDelta,
+    pillLeft,
+    width: el.offsetWidth,
+  };
+}
+
+function setPill(width: number, left: number) {
+  pillStyle.value = {
+    width: `${width}px`,
+    left: `${left}px`,
+  };
+}
+
+function setCurrent(index: number) {
+  if (index === current.value) return;
+
+  const clamped = Math.max(0, Math.min(index, steps.length - 1));
+  const metrics = getTargetMetrics(clamped);
+  const el = containerRef.value;
+
+  if (!metrics || !el) return;
+
+  previous.value = steps[current.value].image;
+  current.value = clamped;
+
+  requestAnimationFrame(() => {
+    setPill(metrics.width, metrics.pillLeft);
+    animateScroll(el, metrics.scrollDelta, 320);
+  });
+}
+
+function next() {
+  setCurrent(current.value + 1);
+}
+
+function prev() {
+  setCurrent(current.value - 1);
+}
+
+function preventWheel(e: WheelEvent) {
+  e.preventDefault();
+}
+
+function preventTouchMove(e: TouchEvent) {
+  e.preventDefault();
+}
+
+function setStepRef(
+  el: Element | ComponentPublicInstance | null,
+  index: number,
+) {
+  if (el instanceof HTMLElement) {
+    stepRefs.value[index] = el;
+  } else {
+    stepRefs.value[index] = null;
+  }
+}
+
+function syncToCurrent() {
+  const metrics = getTargetMetrics(current.value);
+  const el = containerRef.value;
+  if (!metrics || !el) return;
+
+  setPill(metrics.width, metrics.pillLeft);
+
+  // also fix scroll position
+  el.scrollLeft = metrics.targetScrollLeft;
+}
+
+function animateScroll(el: HTMLElement, delta: number, duration: number) {
+  const start = el.scrollLeft;
+  const target = start + delta;
+  const startTime = performance.now();
+
+  const easeOut = (t: number) => 1 - Math.pow(1 - t, 2.2); // cubic ease-out
+
+  // animation loop
+  function frame(now: number) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    const eased = easeOut(progress);
+
+    el.scrollLeft = start + (target - start) * eased;
+
+    if (progress >= 1) {
+      el.scrollLeft = target;
+      return; // stop animation
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+}
+
+function handleScroll() {
+  updateScrollState();
+}
+
+const maskStyle = computed(() => {
+  const left = hasOverflow.value && canScrollLeft.value;
+  const right = hasOverflow.value && canScrollRight.value;
+
+  const ARROW = 40;
+  const PADDING = 4;
+  const OFFSET = ARROW - PADDING;
+  const FADE = 24;
+
+  if (left && right) {
+    return {
+      WebkitMaskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+      maskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+    };
+  }
+
+  // left only
+  if (left) {
+    return {
+      WebkitMaskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black 100%
+      )`,
+      maskImage: `linear-gradient(
+        to right,
+        transparent ${OFFSET}px,
+        black ${OFFSET + FADE}px,
+        black 100%
+      )`,
+    };
+  }
+
+  // right only
+  if (right) {
+    return {
+      WebkitMaskImage: `linear-gradient(
+        to right,
+        black 0,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+      maskImage: `linear-gradient(
+        to right,
+        black 0,
+        black calc(100% - ${OFFSET + FADE}px),
+        transparent calc(100% - ${OFFSET}px)
+      )`,
+    };
+  }
+
+  return {};
+});
+
+watch(current, async () => {
+  await nextTick();
+  checkOverflow();
+});
+
+onMounted(async () => {
+  await nextTick();
+
+  const el = containerRef.value;
+  const metrics = getTargetMetrics(current.value);
+  if (!el || !metrics) return;
+
+  el.addEventListener("wheel", preventWheel, { passive: false });
+  el.addEventListener("touchmove", preventTouchMove, { passive: false });
+
+  // init
+  checkOverflow();
+  setPill(metrics.width, metrics.pillLeft);
+
+  // listen to scroll
+  el.addEventListener("scroll", handleScroll);
+
+  // observe size changes
+  let frame: number | null = null;
+  resizeObserver = new ResizeObserver(() => {
+    if (frame) cancelAnimationFrame(frame);
+
+    frame = requestAnimationFrame(() => {
+      checkOverflow();
+      syncToCurrent();
+    });
+  });
+
+  resizeObserver.observe(el);
+});
+
+onBeforeUnmount(() => {
+  const el = containerRef.value;
+
+  if (el) {
+    el.removeEventListener("scroll", handleScroll);
+    el.removeEventListener("wheel", preventWheel);
+    el.removeEventListener("touchmove", preventTouchMove);
+  }
+
+  if (resizeObserver) {
+    resizeObserver.disconnect();
+    resizeObserver = null;
+  }
+});
 </script>
+
+<style>
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Text animation */
+.fade-enter-active {
+  transition: opacity 200ms ease;
+  transition-delay: 140ms;
+}
+
+.fade-leave-active {
+  transition: opacity 120ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Mockup animation */
+.fade-out {
+  animation: fadeOut 400ms cubic-bezier(0.3, 0, 0.2, 1);
+  animation-delay: 80ms;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+</style>

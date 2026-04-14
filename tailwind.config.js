@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       dropShadow: {
-        phone: ["0 18px 35px rgba(0,0,0,0.14)", "0 6px 12px rgba(0,0,0,0.06)"],
+        phone: ["0 20px 40px rgba(0,0,0,0.15)", "0 8px 16px rgba(0,0,0,0.06)"],
       },
       colors: {
         background: "oklch(var(--background) / <alpha-value>)",
@@ -13,6 +13,7 @@ export default {
 
         section: {
           DEFAULT: "oklch(var(--section) / <alpha-value>)",
+          foreground: "oklch(var(--section-foreground) / <alpha-value>)",
         },
 
         card: {
@@ -79,6 +80,19 @@ export default {
 
       transitionDuration: {
         400: "400ms",
+      },
+
+      keyframes: {
+        "nudge-down": {
+          "0%": { transform: "translateY(0)" },
+          "40%": { transform: "translateY(8px)" },
+          "60%": { transform: "translateY(8px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+
+      animation: {
+        "nudge-down": "nudge-down 2s ease-in-out 0.5s infinite",
       },
     },
   },
