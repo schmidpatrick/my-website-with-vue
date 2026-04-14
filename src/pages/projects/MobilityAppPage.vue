@@ -14,11 +14,11 @@
         >
           Case Study
         </p>
-        <p
+        <!-- <p
           class="bg-section rounded px-2 py-1 text-xs font-medium text-muted-foreground/80"
         >
           {{ project?.read }} min read
-        </p>
+        </p> -->
       </div>
 
       <p>
