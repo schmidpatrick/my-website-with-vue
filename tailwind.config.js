@@ -11,11 +11,6 @@ export default {
         background: "oklch(var(--background) / <alpha-value>)",
         foreground: "oklch(var(--foreground) / <alpha-value>)",
 
-        section: {
-          DEFAULT: "oklch(var(--section) / <alpha-value>)",
-          foreground: "oklch(var(--section-foreground) / <alpha-value>)",
-        },
-
         card: {
           DEFAULT: "oklch(var(--card) / <alpha-value>)",
           foreground: "oklch(var(--card-foreground) / <alpha-value>)",
@@ -80,19 +75,6 @@ export default {
 
       transitionDuration: {
         400: "400ms",
-      },
-
-      keyframes: {
-        "nudge-down": {
-          "0%": { transform: "translateY(0)" },
-          "40%": { transform: "translateY(8px)" },
-          "60%": { transform: "translateY(8px)" },
-          "100%": { transform: "translateY(0)" },
-        },
-      },
-
-      animation: {
-        "nudge-down": "nudge-down 2s ease-in-out 0.5s infinite",
       },
     },
   },
