@@ -4,7 +4,7 @@
       <div class="grid gap-8 items-end mt-12 sm:mt-24 sm:mb-12 sm:grid-cols-12">
         <div class="sm:col-span-7">
           <h1>
-            Patrick Schmid&nbsp;—<br />a product designer bridging code, design
+            Patrick Schmid&nbsp;—<br />a product engineer bridging code, design
             & business.
           </h1>
         </div>
