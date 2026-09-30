@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full p-4 sm:p-6">
-    <div class="max-w-5xl m-auto">
+  <div class="w-full px-6 py-12">
+    <div class="max-w-4xl m-auto">
       <slot></slot>
     </div>
   </div>

@@ -73,6 +73,10 @@ export default {
         mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
       },
 
+      fontSize: {
+        base: "1.125rem",
+      },
+
       transitionDuration: {
         400: "400ms",
       },
